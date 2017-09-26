@@ -1,61 +1,76 @@
+
+
 <!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Blog | React</title>
-  <meta name="viewport" content="width=device-width">
-  <meta property="og:title" content="Blog | React">
+  <title>Blog - React</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Blog - React">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://facebook.github.io/react/blog/page9/index.html">
-  <meta property="og:image" content="http://facebook.github.io/react/img/logo_og.png">
+  <meta property="og:url" content="https://facebook.github.io/react/blog/page9/">
+  <meta property="og:image" content="https://facebook.github.io/react/img/logo_og.png">
   <meta property="og:description" content="A JavaScript library for building user interfaces">
   <meta property="fb:app_id" content="623268441017527">
 
   <link rel="shortcut icon" href="/react/favicon.ico">
-  <link rel="alternate" type="application/rss+xml" title="React" href="http://facebook.github.io/react/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="React" href="https://facebook.github.io/react/feed.xml">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
   <link rel="stylesheet" href="/react/css/syntax.css">
   <link rel="stylesheet" href="/react/css/codemirror.css">
   <link rel="stylesheet" href="/react/css/react.css">
 
-  <script type="text/javascript" src="//use.typekit.net/vqa1hcx.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="//use.typekit.net/vqa1hcx.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
 
   <!--[if lte IE 8]>
-  <script type="text/javascript" src="/react/js/html5shiv.min.js"></script>
-  <script type="text/javascript" src="/react/js/es5-shim.min.js"></script>
-  <script type="text/javascript" src="/react/js/es5-sham.min.js"></script>
+  <script src="https://unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://unpkg.com/es5-shim@4.5.9/es5-shim.min.js"></script>
+  <script src="https://unpkg.com/es5-shim@4.5.9/es5-sham.min.js"></script>
   <![endif]-->
-  <script type="text/javascript" src="/react/js/codemirror.js"></script>
-  <script type="text/javascript" src="/react/js/javascript.js"></script>
-  <script type="text/javascript" src="/react/js/react.js"></script>
-  <script type="text/javascript" src="/react/js/JSXTransformer.js"></script>
-  <script type="text/javascript" src="/react/js/live_editor.js"></script>
-  <script type="text/javascript" src="/react/js/showdown.js"></script>
+  <script src="https://unpkg.com/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
+  <script src="https://unpkg.com/codemirror@5.15.2"></script>
+  <script src="https://unpkg.com/codemirror@5.15.2/mode/javascript/javascript.js"></script>
+  <script src="https://unpkg.com/codemirror@5.15.2/mode/xml/xml.js"></script>
+  <script src="https://unpkg.com/codemirror@5.15.2/mode/jsx/jsx.js"></script>
+  <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+  <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/create-react-class/create-react-class.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <script src="/react/js/live_editor.js"></script>
 </head>
 <body>
 
   <div class="container">
 
     <div class="nav-main">
-      <div class="wrap">
-        <a class="nav-home" href="/react/index.html">
-          <img class="nav-logo" src="/react/img/logo.svg" width="36" height="36">
-          React
-        </a>
-        <ul class="nav-site">
-          <li><a href="/react/docs/getting-started.html">docs</a></li>
-          <li><a href="/react/support.html">support</a></li>
-          <li><a href="/react/downloads.html">download</a></li>
-          <li><a href="/react/blog/" class="active">blog</a></li>
-          <li><a href="http://github.com/facebook/react">github</a>
-        </ul>
-      </div>
+  <div class="wrap">
+    <a class="nav-home" href="/react/">
+      <img class="nav-logo" src="/react/img/logo.svg" width="36" height="36">
+      React
+    </a>
+    <div class="nav-lists">
+      <ul class="nav-site nav-site-internal">
+        <li><a href="/react/docs/hello-world.html">Docs</a></li>
+        <li><a href="/react/tutorial/tutorial.html">Tutorial</a></li>
+        <li><a href="/react/community/support.html">Community</a></li>
+        <li><a href="/react/blog/" class="active">Blog</a></li>
+        <li class="nav-site-search">
+          <input id="algolia-doc-search" type="text" placeholder="Search docs..." />
+        </li>
+      </ul>
+      <ul class="nav-site nav-site-external">
+        <li><a href="https://github.com/facebook/react">GitHub</a></li>
+        <li><a href="https://github.com/facebook/react/releases">v16.0.0</a></li>
+      </ul>
     </div>
+  </div>
+</div>
 
-    
 
     <section class="content wrap blogContent">
   <div class="nav-docs nav-blog">
@@ -63,25 +78,25 @@
     <h3>Recent posts</h3>
     <ul>
       
-        <li><a href="/react/blog/2014/12/19/react-js-conf-diversity-scholarship.html">React.js Conf Diversity Scholarship</a></li>
+        <li><a href="/react/blog/2017/09/26/react-v16.0.html">React v16.0</a></li>
       
-        <li><a href="/react/blog/2014/12/18/react-v0.12.2.html">React v0.12.2</a></li>
+        <li><a href="/react/blog/2017/09/25/react-v15.6.2.html">React v15.6.2</a></li>
       
-        <li><a href="/react/blog/2014/11/25/community-roundup-24.html">Community Round-up #24</a></li>
+        <li><a href="/react/blog/2017/09/08/dom-attributes-in-react-16.html">DOM Attributes in React 16</a></li>
       
-        <li><a href="/react/blog/2014/11/24/react-js-conf-updates.html">React.js Conf Updates</a></li>
+        <li><a href="/react/blog/2017/07/26/error-handling-in-react-16.html">Error Handling in React 16</a></li>
       
-        <li><a href="/react/blog/2014/10/28/react-v0.12.html">React v0.12</a></li>
+        <li><a href="/react/blog/2017/06/13/react-v15.6.0.html">React v15.6.0</a></li>
       
-        <li><a href="/react/blog/2014/10/27/react-js-conf.html">React.js Conf</a></li>
+        <li><a href="/react/blog/2017/05/18/whats-new-in-create-react-app.html">What's New in Create React App</a></li>
       
-        <li><a href="/react/blog/2014/10/17/community-roundup-23.html">Community Round-up #23</a></li>
+        <li><a href="/react/blog/2017/04/07/react-v15.5.0.html">React v15.5.0</a></li>
       
-        <li><a href="/react/blog/2014/10/16/react-v0.12-rc1.html">React v0.12 RC</a></li>
+        <li><a href="/react/blog/2016/11/16/react-v15.4.0.html">React v15.4.0</a></li>
       
-        <li><a href="/react/blog/2014/10/14/introducing-react-elements.html">Introducing React Elements</a></li>
+        <li><a href="/react/blog/2016/09/28/our-first-50000-stars.html">Our First 50,000 Stars</a></li>
       
-        <li><a href="/react/blog/2014/09/24/testing-flux-applications.html">Testing Flux Applications</a></li>
+        <li><a href="/react/blog/2016/08/05/relay-state-of-the-state.html">Relay: State of the State</a></li>
       
       <li><a href="/react/blog/all.html">All posts ...</a></li>
     </ul>
@@ -91,369 +106,450 @@
   <div class="inner-content">
     
       <div class="post-list-item">
-        <h1><a href="/react/blog/2013/11/05/thinking-in-react.html">Thinking in React</a></h1>
-        <p class="meta">November  5, 2013 by Pete Hunt</p>
-        <hr />
-        <div class="post">
-         <p>React is, in my opinion, the premier way to build big, fast Web apps with JavaScript. It has scaled very well for us at Facebook and Instagram.</p>
+        
 
-<p>One of the many great parts of React is how it makes you think about apps as you build them. In this post I&#39;ll walk you through the thought process of building a searchable product data table using React.</p>
-<h2><a class="anchor" name="start-with-a-mock"></a>Start with a mock <a class="hash-link" href="#start-with-a-mock">#</a></h2>
-<p>Imagine that we already have a JSON API and a mock from our designer. Our designer apparently isn&#39;t very good because the mock looks like this:</p>
+<h1>
 
-<p><img src="/react/img/blog/thinking-in-react-mock.png" alt="Mockup"></p>
+  <a href="/react/blog/2015/05/08/react-v0.13.3.html">React v0.13.3</a>
 
-<p>Our JSON API returns some data that looks like this:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[
-  {category: &quot;Sporting Goods&quot;, price: &quot;$49.99&quot;, stocked: true, name: &quot;Football&quot;},
-  {category: &quot;Sporting Goods&quot;, price: &quot;$9.99&quot;, stocked: true, name: &quot;Baseball&quot;},
-  {category: &quot;Sporting Goods&quot;, price: &quot;$29.99&quot;, stocked: false, name: &quot;Basketball&quot;},
-  {category: &quot;Electronics&quot;, price: &quot;$99.99&quot;, stocked: true, name: &quot;iPod Touch&quot;},
-  {category: &quot;Electronics&quot;, price: &quot;$399.99&quot;, stocked: false, name: &quot;iPhone 5&quot;},
-  {category: &quot;Electronics&quot;, price: &quot;$199.99&quot;, stocked: true, name: &quot;Nexus 7&quot;}
-];
-</code></pre></div><h2><a class="anchor" name="step-1-break-the-ui-into-a-component-hierarchy"></a>Step 1: break the UI into a component hierarchy <a class="hash-link" href="#step-1-break-the-ui-into-a-component-hierarchy">#</a></h2>
-<p>The first thing you&#39;ll want to do is to draw boxes around every component (and subcomponent) in the mock and give them all names. If you&#39;re working with a designer they may have already done this, so go talk to them! Their Photoshop layer names may end up being the names of your React components!</p>
+</h1>
 
-<p>But how do you know what should be its own component? Just use the same techniques for deciding if you should create a new function or object. One such technique is the <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility principle</a>, that is, a component should ideally only do one thing. If it ends up growing it should be decomposed into smaller subcomponents.</p>
+<p class="meta">
+  May  8, 2015
+  by
+  
+    
+      <a href="https://twitter.com/zpao">Paul O’Shannessy</a>
+    
+    
+  
+</p>
 
-<p>Since you&#39;re often displaying a JSON data model to a user, you&#39;ll find that if your model was built correctly your UI (and therefore your component structure) will map nicely onto it. That&#39;s because user interfaces and data models tend to adhere to the same <em>information architecture</em> which means the work of separating your UI into components is often trivial. Just break it up into components that represent exactly one piece of your data model.</p>
+<hr>
 
-<p><img src="/react/img/blog/thinking-in-react-components.png" alt="Component diagram"></p>
+<div class="post">
+  <p>Today we&#39;re sharing another patch release in the v0.13 branch. There are only a few small changes, with a couple to address some issues that arose around that undocumented feature so many of you are already using: <code>context</code>. We also improved developer ergonomics just a little bit, making some warnings better.</p>
 
-<p>You&#39;ll see here that we have five components in our simple app. I&#39;ve italicized the data each component represents.</p>
-
-<ol>
-<li><strong><code>FilterableProductTable</code> (orange):</strong> contains the entirety of the example</li>
-<li><strong><code>SearchBar</code> (blue):</strong> receives all <em>user input</em></li>
-<li><strong><code>ProductTable</code> (green):</strong> displays and filters the <em>data collection</em> based on <em>user input</em></li>
-<li><strong><code>ProductCategoryRow</code> (turquoise):</strong> displays a heading for each <em>category</em></li>
-<li><strong><code>ProductRow</code> (red):</strong> displays a row for each <em>product</em></li>
-</ol>
-
-<p>If you look at <code>ProductTable</code> you&#39;ll see that the table header (containing the &quot;Name&quot; and &quot;Price&quot; labels) isn&#39;t its own component. This is a matter of preference and there&#39;s an argument to be made either way. For this example I left it as part of <code>ProductTable</code> because it is part of rendering the <em>data collection</em> which is <code>ProductTable</code>&#39;s responsibility. However if this header grows to be complex (i.e. if we were to add affordances for sorting) it would certainly make sense to make this its own <code>ProductTableHeader</code> component.</p>
-
-<p>Now that we&#39;ve identified the components in our mock, let&#39;s arrange them into a hierarchy. This is easy. Components that appear within another component in the mock should appear as a child in the hierarchy:</p>
+<p>The release is now available for download:</p>
 
 <ul>
-<li><code>FilterableProductTable</code>
+<li><strong>React</strong><br>
+Dev build with warnings: <a href="https://fb.me/react-0.13.3.js">https://fb.me/react-0.13.3.js</a><br>
+Minified build for production: <a href="https://fb.me/react-0.13.3.min.js">https://fb.me/react-0.13.3.min.js</a><br></li>
+<li><strong>React with Add-Ons</strong><br>
+Dev build with warnings: <a href="https://fb.me/react-with-addons-0.13.3.js">https://fb.me/react-with-addons-0.13.3.js</a><br>
+Minified build for production: <a href="https://fb.me/react-with-addons-0.13.3.min.js">https://fb.me/react-with-addons-0.13.3.min.js</a><br></li>
+<li><strong>In-Browser JSX transformer</strong><br>
+<a href="https://fb.me/JSXTransformer-0.13.3.js">https://fb.me/JSXTransformer-0.13.3.js</a></li>
+</ul>
+
+<p>We&#39;ve also published version <code>0.13.3</code> of the <code>react</code> and <code>react-tools</code> packages on npm and the <code>react</code> package on bower.</p>
+
+<hr>
+
+<h2>Changelog</h2>
+
+<h3>React Core</h3>
+
+<h4>New Features</h4>
 
 <ul>
-<li><code>SearchBar</code></li>
-<li><code>ProductTable</code>
+<li>Added <code>clipPath</code> element and attribute for SVG</li>
+<li>Improved warnings for deprecated methods in plain JS classes</li>
+</ul>
+
+<h4>Bug Fixes</h4>
 
 <ul>
-<li><code>ProductCategoryRow</code></li>
-<li><code>ProductRow</code></li>
+<li>Loosened <code>dangerouslySetInnerHTML</code> restrictions so <code>{__html: undefined}</code> will no longer throw</li>
+<li>Fixed extraneous context warning with non-pure <code>getChildContext</code></li>
+<li>Ensure <code>replaceState(obj)</code> retains prototype of <code>obj</code></li>
+</ul>
+
+<h3>React with Add-ons</h3>
+
+<h3>Bug Fixes</h3>
+
+<ul>
+<li>Test Utils: Ensure that shallow rendering works when components define <code>contextTypes</code></li>
+</ul>
+
+</div>
+
+
+
+      </div>
+    
+      <div class="post-list-item">
+        
+
+<h1>
+
+  <a href="/react/blog/2015/05/01/graphql-introduction.html">GraphQL Introduction</a>
+
+</h1>
+
+<p class="meta">
+  May  1, 2015
+  by
+  
+    
+      <a href="https://twitter.com/schrockn">Nick Schrock</a>
+    
+    
+  
+</p>
+
+<hr>
+
+<div class="post">
+  <p>At the React.js conference in late January 2015, we revealed our next major technology in the React family: <a href="http://facebook.github.io/react/blog/2015/02/20/introducing-relay-and-graphql.html">Relay</a>. </p>
+
+<p>Relay is a new way of structuring client applications that co-locates data-fetching requirements and React components. Instead of placing data fetching logic in some other part of the client application – or embedding this logic in a custom endpoint on the server – we instead co-locate a <em>declarative</em> data-fetching specification alongside the React component. The language of this declarative specification is GraphQL.</p>
+
+<p>GraphQL was not invented to enable Relay. In fact, GraphQL predates Relay by nearly three years. It was invented during the move from Facebook&#39;s HTML5-driven mobile applications to purely native applications. It is a query language for graph data that powers the lion&#39;s share of interactions in the Facebook Android and iOS applications. Any user of the native iOS or Android app in the last two years has used an app powered by GraphQL.</p>
+
+<p>We plan to open-source a reference implementation of a GraphQL server and publish a language specification in the coming months. Our goal is to evolve GraphQL to adapt to a wide range of backends, so that projects and companies can use this technology to access their own data. We believe that this is a compelling way to structure servers and to provide powerful abstractions, frameworks and tools – including, but not exclusively, Relay – for product developers.</p>
+
+<h2>What is GraphQL?</h2>
+
+<p>A GraphQL query is a string interpreted by a server that returns data in a specified format. Here is an example query: </p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+  <span class="nx">user</span><span class="p">(</span><span class="nx">id</span><span class="o">:</span> <span class="mi">3500401</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">id</span><span class="p">,</span>
+    <span class="nx">name</span><span class="p">,</span>
+    <span class="nx">isViewerFriend</span><span class="p">,</span>
+    <span class="nx">profilePicture</span><span class="p">(</span><span class="nx">size</span><span class="o">:</span> <span class="mi">50</span><span class="p">)</span>  <span class="p">{</span>
+      <span class="nx">uri</span><span class="p">,</span>
+      <span class="nx">width</span><span class="p">,</span>
+      <span class="nx">height</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>(Note: this syntax is slightly different from previous GraphQL examples. We&#39;ve recently been making improvements to the language.)</p>
+
+<p>And here is the response to that query.</p>
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&quot;user&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3500401</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jing Chen&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;isViewerFriend&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;profilePicture&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;uri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://someurl.cdn/pic.jpg&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;width&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+      <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="mi">50</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>We will dig into the syntax and semantics of GraphQL in a later post, but even a simple example shows many of its design principles:</p>
+
+<ul>
+<li><strong>Hierarchical:</strong> Most product development today involves the creation and manipulation of view hierarchies. To achieve congruence with the structure of these applications, a GraphQL query itself is a hierarchical set of fields. The query is shaped just like the data it returns. It is a natural way for product engineers to describe data requirements.</li>
+<li><strong>Product-centric:</strong> GraphQL is unapologetically driven by the requirements of views and the front-end engineers that write them. We start with their way of thinking and requirements and build the language and runtime necessary to enable that.</li>
+<li><strong>Client-specified queries:</strong> In GraphQL, the specification for queries are encoded in the <em>client</em> rather than the <em>server</em>. These queries are specified at field-level granularity. In the vast majority of applications written without GraphQL, the server determines the data returned in its various scripted endpoints. A GraphQL query, on the other hand, returns exactly what a client asks for and no more.</li>
+<li><strong>Backwards Compatible:</strong> In a world of deployed native mobile applications with no forced upgrades, backwards compatibility is a challenge. Facebook, for example, releases apps on a two week fixed cycle and pledges to maintain those apps for <em>at least</em> two years. This means there are at a <em>minimum</em> 52 versions of our clients per platform querying our servers at any given time. Client-specified queries simplifies managing our backwards compatibility guarantees.</li>
+<li><strong>Structured, Arbitrary Code:</strong> Query languages with field-level granularity have typically queried storage engines directly, such as SQL. GraphQL instead imposes a structure onto a server, and exposes fields that are backed by <em>arbitrary code</em>. This allows for both server-side flexibility and a uniform, powerful API across the entire surface area of an application.</li>
+<li><strong>Application-Layer Protocol:</strong> GraphQL is an application-layer protocol and does not require a particular transport. It is a string that is parsed and interpreted by a server.</li>
+<li><strong>Strongly-typed:</strong> GraphQL is strongly-typed. Given a query, tooling can ensure that the query is both syntactically correct and valid within the GraphQL type system before execution, i.e. at development time, and the server can make certain guarantees about the shape and nature of the response. This makes it easier to build high quality client tools.</li>
+<li><strong>Introspective:</strong> GraphQL is introspective. Clients and tools can query the type system using the GraphQL syntax itself. This is a powerful platform for building tools and client software, such as automatic parsing of incoming data into strongly-typed interfaces. It is especially useful in statically typed languages such as Swift, Objective-C and Java, as it obviates the need for repetitive and error-prone code to shuffle raw, untyped JSON into strongly-typed business objects.</li>
+</ul>
+
+<h2>Why invent something new?</h2>
+
+<p>Obviously GraphQL is not the first system to manage client-server interactions. In today&#39;s world there are two dominant architectural styles for client-server interaction: REST and <em>ad hoc</em> endpoints. </p>
+
+<h3>REST</h3>
+
+<p>REST, an acronym for Representational State Transfer, is an architectural style rather than a formal protocol. There is actually much debate about what exactly REST is and is not. We wish to avoid such debates. We are interested in the typical attributes of systems that <em>self-identify</em> as REST, rather than systems which are formally REST.</p>
+
+<p>Objects in a typical REST system are addressable by URI and interacted with using verbs in the HTTP protocol. An HTTP GET to a particular URI fetches an object and returns a server-specified set of fields. An HTTP PUT edits an object; an HTTP DELETE deletes an object; and so on.</p>
+
+<p>We believe there are a number of weakness in typical REST systems, ones that are particularly problematic in mobile applications:</p>
+
+<ul>
+<li>Fetching complicated object graphs require multiple round trips between the client and server to render single views. For mobile applications operating in variable network conditions, these multiple roundtrips are highly undesirable.</li>
+<li>Invariably fields and additional data are added to REST endpoints as the system requirements change. However, old clients also receive this additional data as well, because the data fetching specification is encoded on the server rather than the client. As result, these payloads tend to grow over time for all clients. When this becomes a problem for a system, one solution is to overlay a versioning system onto the REST endpoints. Versioning also complicates a server, and results in code duplication, spaghetti code, or a sophisticated, hand-rolled infrastructure to manage it. Another solution to limit over-fetching is to provide multiple views – such as “compact” vs “full” – of the same REST endpoint, however this coarse granularity often does not offer adequate flexibility.</li>
+<li>REST endpoints are usually weakly-typed and lack machine-readable metadata. While there is much debate about the merits of strong- versus weak-typing in distributed systems, we believe in strong typing because of the correctness guarantees and tooling opportunities it provides. Developers deal with systems that lack this metadata by inspecting frequently out-of-date documentation and then writing code against the documentation.</li>
+<li>Many of these attributes are linked to the fact that “REST is intended for long-lived network-based applications that span multiple organizations” <a href="http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven">according to its inventor</a>. This is not a requirement for APIs that serve a client app built within the same organization.</li>
+</ul>
+
+<p>Nearly all externally facing REST APIs we know of trend or end up in these non-ideal states, as well as nearly all <em>internal</em> REST APIs. The consequences of opaqueness and over-fetching are more severe in internal APIs since their velocity of change and level of usage is almost always higher.</p>
+
+<p>Because of multiple round-trips and over-fetching, applications built in the REST style inevitably end up building <em>ad hoc</em> endpoints that are superficially in the REST style. These actually couple the data to a particular view which explicitly violates one of REST&#39;s major goals. Most REST systems of any complexity end up as a continuum of endpoints that span from “traditional” REST to <em>ad hoc</em> endpoints.</p>
+
+<h3>Ad Hoc Endpoints</h3>
+
+<p>Many applications have no formalized client-server contract. Product developers access server capabilities through <em>ad hoc</em> endpoints and write custom code to fetch the data they need. Servers define procedures, and they return data. This approach has the virtue of simplicity, but can often become untenable as systems age.</p>
+
+<ul>
+<li>These systems typically define a custom endpoint per view. For systems with a wide surface area this can quickly grow into a maintenance nightmare of orphaned endpoints, inconsistent tooling, and massive server code duplication. Disciplined engineering organizations can mitigate these issues with great engineering practices, high quality abstractions, and custom tooling. However, given our experience we believe that custom endpoints tend to lead to entropic server codebases.</li>
+<li>Much like REST, the payloads of custom endpoints grow monotonically (even with mitigation from versioning systems) as the server evolves. Deployed clients cannot break, and, with rapid release cycles and backwards compatibility guarantees, distributed applications will have large numbers of extant versions. Under these constraints it is difficult to remove data from a custom endpoint.</li>
+<li>Custom endpoints tend to – for a client developer – create a clunky, multi-language, multi-environment development process. No matter if the data has been accessed before in a different view, they are required to first change the custom endpoint, then deploy that code to a server accessible from a mobile device, and only then change the client to utilize that data. In GraphQL  – unless the data in the view is completely new to the entire system  – a product developer adds a field to a GraphQL query and the work on the client continues unabated.</li>
+<li>Much like REST, most systems with custom endpoints do not have a formalized type system, which eliminates the possibility for the tools and guarantees that introspective type systems can provide. Some custom-endpoint-driven systems do use a strongly typed serialization scheme, such as Protocol Buffers, Thrift, or XML. Those do allow for direct parsing of responses into typed classes and eliminating boilerplate shuffling from JSON into handwritten classes. These systems are as not as expressive and flexible as GraphQL, and the other downsides of <em>ad hoc</em> endpoints remain.</li>
+</ul>
+
+<p>We believe that GraphQL represents a novel way of structuring the client-server contract. Servers publish a type system specific to their application, and GraphQL provides a unified language to query data within the constraints of that type system. That language allows product developers to express data requirements in a form natural to them: a declarative and hierarchal one.</p>
+
+<p>This is a liberating platform for product developers. With GraphQL, no more contending with <em>ad hoc</em> endpoints or object retrieval with multiple roundtrips to access server data; instead an elegant, hierarchical, declarative query dispatched to a single endpoint. No more  frequent jumps between client and server development environments to do experimentation or to change or create views of existing data; instead experiments are done and new views built within a native, client development environment exclusively. No more shuffling unstructured data from <em>ad hoc</em> endpoints into business objects; instead a powerful, introspective type system that serves as a platform for tool building.</p>
+
+<p>Product developers are free to focus on their client software and requirements while rarely leaving their development environment; they can more confidently support shipped clients as a system evolves; and they are using a protocol designed to operate well within the constraints of mobile applications. Product developers can query for exactly what they want, in the way they think about it, across their entire application&#39;s data model. </p>
+
+<h2>What&#39;s next?</h2>
+
+<p>Over the coming months, we will share more technical details about GraphQL, including additional language features, tools that support it, and how it is built and used at Facebook. These posts will culminate in a formal specification of GraphQL to guide implementors across various languages and platforms. We also plan on releasing a reference implementation in the summer, in order to provide a basis for custom deployments and a platform for experimentation. We&#39;re incredibly excited to share this system and work with the open source community to improve it.</p>
+
+</div>
+
+
+
+      </div>
+    
+      <div class="post-list-item">
+        
+
+<h1>
+
+  <a href="/react/blog/2015/04/18/react-v0.13.2.html">React v0.13.2</a>
+
+</h1>
+
+<p class="meta">
+  April 18, 2015
+  by
+  
+    
+      <a href="https://twitter.com/zpao">Paul O’Shannessy</a>
+    
+    
+  
+</p>
+
+<hr>
+
+<div class="post">
+  <p>Yesterday the <a href="/react/blog/2015/04/17/react-native-v0.4.html">React Native team shipped v0.4</a>. Those of us working on the web team just a few feet away couldn&#39;t just be shown up like that so we&#39;re shipping v0.13.2 today as well! This is a bug fix release to address a few things while we continue to work towards v0.14.</p>
+
+<p>The release is now available for download:</p>
+
+<ul>
+<li><strong>React</strong><br>
+Dev build with warnings: <a href="https://fb.me/react-0.13.2.js">https://fb.me/react-0.13.2.js</a><br>
+Minified build for production: <a href="https://fb.me/react-0.13.2.min.js">https://fb.me/react-0.13.2.min.js</a><br></li>
+<li><strong>React with Add-Ons</strong><br>
+Dev build with warnings: <a href="https://fb.me/react-with-addons-0.13.2.js">https://fb.me/react-with-addons-0.13.2.js</a><br>
+Minified build for production: <a href="https://fb.me/react-with-addons-0.13.2.min.js">https://fb.me/react-with-addons-0.13.2.min.js</a><br></li>
+<li><strong>In-Browser JSX transformer</strong><br>
+<a href="https://fb.me/JSXTransformer-0.13.2.js">https://fb.me/JSXTransformer-0.13.2.js</a></li>
+</ul>
+
+<p>We&#39;ve also published version <code>0.13.2</code> of the <code>react</code> and <code>react-tools</code> packages on npm and the <code>react</code> package on bower.</p>
+
+<hr>
+
+<h2>Changelog</h2>
+
+<h3>React Core</h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>Added <code>strokeDashoffset</code>, <code>flexPositive</code>, <code>flexNegative</code> to the list of unitless CSS properties</li>
+<li>Added support for more DOM properties:
+
+<ul>
+<li><code>scoped</code> - for <code>&lt;style&gt;</code> elements</li>
+<li><code>high</code>, <code>low</code>, <code>optimum</code> - for <code>&lt;meter&gt;</code> elements</li>
+<li><code>unselectable</code> - IE-specific property to prevent user selection</li>
 </ul></li>
-</ul></li>
 </ul>
-<h2><a class="anchor" name="step-2-build-a-static-version-in-react"></a>Step 2: Build a static version in React <a class="hash-link" href="#step-2-build-a-static-version-in-react">#</a></h2>
-<iframe width="100%" height="300" src="http://jsfiddle.net/6wQMG/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-<p>Now that you have your component hierarchy it&#39;s time to start implementing your app. The easiest way is to build a version that takes your data model and renders the UI but has no interactivity. It&#39;s easiest to decouple these processes because building a static version requires a lot of typing and no thinking, and adding interactivity requires a lot of thinking and not a lot of typing. We&#39;ll see why.</p>
-
-<p>To build a static version of your app that renders your data model you&#39;ll want to build components that reuse other components and pass data using <em>props</em>. <em>props</em> are a way of passing data from parent to child. If you&#39;re familiar with the concept of <em>state</em>, <strong>don&#39;t use state at all</strong> to build this static version. State is reserved only for interactivity, that is, data that changes over time. Since this is a static version of the app you don&#39;t need it.</p>
-
-<p>You can build top-down or bottom-up. That is, you can either start with building the components higher up in the hierarchy (i.e. starting with <code>FilterableProductTable</code>) or with the ones lower in it (<code>ProductRow</code>). In simpler examples it&#39;s usually easier to go top-down and on larger projects it&#39;s easier to go bottom-up and write tests as you build.</p>
-
-<p>At the end of this step you&#39;ll have a library of reusable components that render your data model. The components will only have <code>render()</code> methods since this is a static version of your app. The component at the top of the hierarchy (<code>FilterableProductTable</code>) will take your data model as a prop. If you make a change to your underlying data model and call <code>renderComponent()</code> again the UI will be updated. It&#39;s easy to see how your UI is updated and where to make changes since there&#39;s nothing complicated going on since React&#39;s <strong>one-way data flow</strong> (also called <em>one-way binding</em>) keeps everything modular, easy to reason about, and fast.</p>
-
-<p>Simply refer to the <a href="http://facebook.github.io/react/docs/">React docs</a> if you need help executing this step.</p>
-<h3><a class="anchor" name="a-brief-interlude-props-vs-state"></a>A brief interlude: props vs state <a class="hash-link" href="#a-brief-interlude-props-vs-state">#</a></h3>
-<p>There are two types of &quot;model&quot; data in React: props and state. It&#39;s important to understand the distinction between the two; skim <a href="http://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html">the official React docs</a> if you aren&#39;t sure what the difference is.</p>
-<h2><a class="anchor" name="step-3-identify-the-minimal-but-complete-representation-of-ui-state"></a>Step 3: Identify the minimal (but complete) representation of UI state <a class="hash-link" href="#step-3-identify-the-minimal-but-complete-representation-of-ui-state">#</a></h2>
-<p>To make your UI interactive you need to be able to trigger changes to your underlying data model. React makes this easy with <strong>state</strong>.</p>
-
-<p>To build your app correctly you first need to think of the minimal set of mutable state that your app needs. The key here is DRY: <em>Don&#39;t Repeat Yourself</em>. Figure out what the absolute minimal representation of the state of your application needs to be and compute everything else you need on-demand. For example, if you&#39;re building a TODO list, just keep an array of the TODO items around; don&#39;t keep a separate state variable for the count. Instead, when you want to render the TODO count simply take the length of the TODO items array.</p>
-
-<p>Think of all of the pieces of data in our example application. We have:</p>
+<h4>Bug Fixes</h4>
 
 <ul>
-<li>The original list of products</li>
-<li>The search text the user has entered</li>
-<li>The value of the checkbox</li>
-<li>The filtered list of products</li>
+<li>Fixed a case where re-rendering after rendering null didn&#39;t properly pass context</li>
+<li>Fixed a case where re-rendering after rendering with <code>style={null}</code> didn&#39;t properly update <code>style</code></li>
+<li>Update <code>uglify</code> dependency to prevent a bug in IE8</li>
+<li>Improved warnings</li>
 </ul>
 
-<p>Let&#39;s go through each one and figure out which one is state. Simply ask three questions about each piece of data:</p>
+<h3>React with Add-Ons</h3>
 
-<ol>
-<li>Is it passed in from a parent via props? If so, it probably isn&#39;t state.</li>
-<li>Does it change over time? If not, it probably isn&#39;t state.</li>
-<li>Can you compute it based on any other state or props in your component? If so, it&#39;s not state.</li>
-</ol>
-
-<p>The original list of products is passed in as props, so that&#39;s not state. The search text and the checkbox seem to be state since they change over time and can&#39;t be computed from anything. And finally, the filtered list of products isn&#39;t state because it can be computed by combining the original list of products with the search text and value of the checkbox.</p>
-
-<p>So finally, our state is:</p>
+<h4>Bug Fixes</h4>
 
 <ul>
-<li>The search text the user has entered</li>
-<li>The value of the checkbox</li>
+<li>Immutabilty Helpers: Ensure it supports <code>hasOwnProperty</code> as an object key</li>
 </ul>
-<h2><a class="anchor" name="step-4-identify-where-your-state-should-live"></a>Step 4: Identify where your state should live <a class="hash-link" href="#step-4-identify-where-your-state-should-live">#</a></h2>
-<iframe width="100%" height="300" src="http://jsfiddle.net/QvHnx/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-<p>OK, so we&#39;ve identified what the minimal set of app state is. Next we need to identify which component mutates, or <em>owns</em>, this state.</p>
-
-<p>Remember: React is all about one-way data flow down the component hierarchy. It may not be immediately clear which component should own what state. <strong>This is often the most challenging part for newcomers to understand,</strong> so follow these steps to figure it out:</p>
-
-<p>For each piece of state in your application:</p>
+<h3>React Tools</h3>
 
 <ul>
-<li>Identify every component that renders something based on that state.</li>
-<li>Find a common owner component (a single component above all the components that need the state in the hierarchy).</li>
-<li>Either the common owner or another component higher up in the hierarchy should own the state.</li>
-<li>If you can&#39;t find a component where it makes sense to own the state, create a new component simply for holding the state and add it somewhere in the hierarchy above the common owner component.</li>
+<li>Improve documentation for new options</li>
 </ul>
 
-<p>Let&#39;s run through this strategy for our application:</p>
+</div>
 
-<ul>
-<li><code>ProductTable</code> needs to filter the product list based on state and <code>SearchBar</code> needs to display the search text and checked state.</li>
-<li>The common owner component is <code>FilterableProductTable</code>.</li>
-<li>It conceptually makes sense for the filter text and checked value to live in <code>FilterableProductTable</code></li>
-</ul>
 
-<p>Cool, so we&#39;ve decided that our state lives in <code>FilterableProductTable</code>. First, add a <code>getInitialState()</code> method to <code>FilterableProductTable</code> that returns <code>{filterText: &#39;&#39;, inStockOnly: false}</code> to reflect the initial state of your application. Then pass <code>filterText</code> and <code>inStockOnly</code> to <code>ProductTable</code> and <code>SearchBar</code> as a prop. Finally, use these props to filter the rows in <code>ProductTable</code> and set the values of the form fields in <code>SearchBar</code>.</p>
 
-<p>You can start seeing how your application will behave: set <code>filterText</code> to <code>&quot;ball&quot;</code> and refresh your app. You&#39;ll see the data table is updated correctly.</p>
-<h2><a class="anchor" name="step-5-add-inverse-data-flow"></a>Step 5: Add inverse data flow <a class="hash-link" href="#step-5-add-inverse-data-flow">#</a></h2>
-<iframe width="100%" height="300" src="http://jsfiddle.net/3Vs3Q/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-<p>So far we&#39;ve built an app that renders correctly as a function of props and state flowing down the hierarchy. Now it&#39;s time to support data flowing the other way: the form components deep in the hierarchy need to update the state in <code>FilterableProductTable</code>.</p>
-
-<p>React makes this data flow explicit to make it easy to understand how your program works, but it does require a little more typing than traditional two-way data binding. React provides an add-on called <code>ReactLink</code> to make this pattern as convenient as two-way binding, but for the purpose of this post we&#39;ll keep everything explicit.</p>
-
-<p>If you try to type or check the box in the current version of the example you&#39;ll see that React ignores your input. This is intentional, as we&#39;ve set the <code>value</code> prop of the <code>input</code> to always be equal to the <code>state</code> passed in from <code>FilterableProductTable</code>.</p>
-
-<p>Let&#39;s think about what we want to happen. We want to make sure that whenever the user changes the form we update the state to reflect the user input. Since components should only update their own state, <code>FilterableProductTable</code> will pass a callback to <code>SearchBar</code> that will fire whenever the state should be updated. We can use the <code>onChange</code> event on the inputs to be notified of it. And the callback passed by <code>FilterableProductTable</code> will call <code>setState()</code> and the app will be updated.</p>
-
-<p>Though this sounds like a lot it&#39;s really just a few lines of code. And it&#39;s really explicit how your data is flowing throughout the app.</p>
-<h2><a class="anchor" name="and-thats-it"></a>And that&#39;s it <a class="hash-link" href="#and-thats-it">#</a></h2>
-<p>Hopefully this gives you an idea of how to think about building components and applications with React. While it may be a little more typing than you&#39;re used to, remember that code is read far more than it&#39;s written, and it&#39;s extremely easy to read this modular, explicit code. As you start to build large libraries of components you&#39;ll appreciate this explicitness and modularity, and with code reuse your lines of code will start to shrink :)</p>
-
-        </div>
       </div>
     
       <div class="post-list-item">
-        <h1><a href="/react/blog/2013/10/29/react-v0-5-1.html">React v0.5.1</a></h1>
-        <p class="meta">October 29, 2013 by Paul O'Shannessy</p>
-        <hr />
-        <div class="post">
-         <p>This release focuses on fixing some small bugs that have been uncovered over the past two weeks. I would like to thank everybody involved, specifically members of the community who fixed half of the issues found. Thanks to <a href="https://github.com/spicyj">Ben Alpert</a>, <a href="https://github.com/andreypopp">Andrey Popp</a>, and <a href="https://github.com/lrowe">Laurence Rowe</a> for their contributions!</p>
-<h2><a class="anchor" name="changelog"></a>Changelog <a class="hash-link" href="#changelog">#</a></h2><h3><a class="anchor" name="react"></a>React <a class="hash-link" href="#react">#</a></h3>
+        
+
+<h1>
+
+  <a href="/react/blog/2015/04/17/react-native-v0.4.html">React Native v0.4</a>
+
+</h1>
+
+<p class="meta">
+  April 17, 2015
+  by
+  
+    
+      <a href="https://twitter.com/vjeux">Vjeux</a>
+    
+    
+  
+</p>
+
+<hr>
+
+<div class="post">
+  <p>It&#39;s been three weeks since we open sourced React Native and there&#39;s been some insane amount of activity already: over 12.5k stars, 1000 commits, 500 issues, 380 pull requests, and 100 contributors, plus <a href="http://react.parts/native-ios">35 plugins</a> and <a href="http://herman.asia/building-a-flashcard-app-with-react-native">1 app in the app store</a>! We were expecting some buzz around the project but this is way beyond anything we imagined. Thank you!</p>
+
+<p>I&#39;d especially like to thank community members Brent Vatne and James Ide who have both already contributed meaningfully to the project and have been extremely helpful on IRC and with issues and pull requests</p>
+
+<h2>Changelog</h2>
+
+<p>The main focus of the past few weeks has been to make React Native the best possible experience for people outside of Facebook. Here&#39;s a high level summary of what&#39;s happened since we open sourced:</p>
+
 <ul>
-<li>Fixed bug with <code>&lt;input type=&quot;range&quot;&gt;</code> and selection events.</li>
-<li>Fixed bug with selection and focus.</li>
-<li>Made it possible to unmount components from the document root.</li>
-<li>Fixed bug for <code>disabled</code> attribute handling on non-<code>&lt;input&gt;</code> elements.</li>
-</ul>
-<h3><a class="anchor" name="react-with-addons"></a>React with Addons <a class="hash-link" href="#react-with-addons">#</a></h3>
-<ul>
-<li>Fixed bug with transition and animation event detection.</li>
+<li><strong>Error messages and documentation</strong>: We want React Native to be the absolute best developer experience for building mobile apps. We&#39;ve added a lot of warnings, improved the documentation, and fixed many bugs. If you encounter anything, and I really mean anything, that is not expected or clear, please create an issue - we want to hear about it and fix it.</li>
+<li><strong>NPM modules compatibility</strong>: There are a lot of libraries on NPM that do not depend on node/browser internals that would be really useful in React Native, such as superagent, underscore, parse, and many others.  The packager is now a lot more faithful to node/browserify/webpack dependency resolution. If your favorite library doesn&#39;t work out of the box, please open up an issue.</li>
+<li><strong>Infrastructure</strong>: We are refactoring the internals of React Native to make it easier to plug in to existing iOS codebases, as well as improve performance by removing redundant views and shadow views, supporting multiple root views and manually registering classes to reduce startup time.</li>
+<li><strong>Components</strong>: The API for a lot of UI components and APIs, especially the ones we&#39;re not using heavily inside of Facebook, has dramatically improved thanks to many of your pull requests.</li>
+<li><strong>Tests</strong>: We ported JavaScript tests, iOS Snapshot tests, and End to End tests to Travis CI. We have broken GitHub master a couple of times (whoops!) when syncing and we hope that with this growing suite of tests it&#39;s going to become harder and harder to do so.</li>
+<li><strong>Patent Grant</strong>: Many of you had concerns and questions around the PATENTS file. We pushed <a href="https://code.facebook.com/posts/1639473982937255/updating-our-open-source-patent-grant/">a new version of the grant</a>.</li>
+<li><strong>Per commit history</strong>: In order to synchronize from Facebook to GitHub, we used to do one giant commit every few days. We improved our tooling and now have per commit history that maintains author information (both internal and external from pull requests), and we retroactively applied this to historical diffs to provide proper attribution.</li>
 </ul>
 
-        </div>
+<h2>Where are we going?</h2>
+
+<p>In addition to supporting pull requests, issues, and general improvements, we&#39;re also working hard on our internal React Native integrations and on React Native for Android.</p>
+
+</div>
+
+
+
       </div>
     
       <div class="post-list-item">
-        <h1><a href="/react/blog/2013/10/16/react-v0.5.0.html">React v0.5</a></h1>
-        <p class="meta">October 16, 2013 by Paul O'Shannessy</p>
-        <hr />
-        <div class="post">
-         <p>This release is the result of several months of hard work from members of the team and the community. While there are no groundbreaking changes in core, we&#39;ve worked hard to improve performance and memory usage. We&#39;ve also worked hard to make sure we are being consistent in our usage of DOM properties.</p>
+        
 
-<p>The biggest change you&#39;ll notice as a developer is that we no longer support <code>class</code> in JSX as a way to provide CSS classes. Since this prop was being converted to <code>className</code> at the transform step, it caused some confusion when trying to access it in composite components. As a result we decided to make our DOM properties mirror their counterparts in the JS DOM API. There are <a href="https://github.com/facebook/react/blob/master/src/dom/DefaultDOMPropertyConfig.js#L156">a few exceptions</a> where we deviate slightly in an attempt to be consistent internally.</p>
+<h1>
 
-<p>The other major change in v0.5 is that we&#39;ve added an additional build - <code>react-with-addons</code> - which adds support for some extras that we&#39;ve been working on including animations and two-way binding. <a href="/react/docs/addons.html">Read more about these addons in the docs</a>.</p>
-<h2><a class="anchor" name="thanks-to-our-community"></a>Thanks to Our Community <a class="hash-link" href="#thanks-to-our-community">#</a></h2>
-<p>We added <em>22 new people</em> to the list of authors since we launched React v0.4.1 nearly 3 months ago. With a total of 48 names in our <code>AUTHORS</code> file, that means we&#39;ve nearly doubled the number of contributors in that time period. We&#39;ve seen the number of people contributing to discussion on IRC, mailing lists, Stack Overflow, and GitHub continue rising. We&#39;ve also had people tell us about talks they&#39;ve given in their local community about React.</p>
+  <a href="/react/blog/2015/03/30/community-roundup-26.html">Community Round-up #26</a>
 
-<p>It&#39;s been awesome to see the things that people are building with React, and we can&#39;t wait to see what you come up with next!</p>
-<h2><a class="anchor" name="changelog"></a>Changelog <a class="hash-link" href="#changelog">#</a></h2><h3><a class="anchor" name="react"></a>React <a class="hash-link" href="#react">#</a></h3>
-<ul>
-<li>Memory usage improvements - reduced allocations in core which will help with GC pauses</li>
-<li>Performance improvements - in addition to speeding things up, we made some tweaks to stay out of slow path code in V8 and Nitro.</li>
-<li>Standardized prop -&gt; DOM attribute process. This previously resulting in additional type checking and overhead as well as confusing cases for users. Now we will always convert your value to a string before inserting it into the DOM.</li>
-<li>Support for Selection events.</li>
-<li>Support for <a href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent">Composition events</a>.</li>
-<li>Support for additional DOM properties (<code>charSet</code>, <code>content</code>, <code>form</code>, <code>httpEquiv</code>, <code>rowSpan</code>, <code>autoCapitalize</code>).</li>
-<li>Support for additional SVG properties (<code>rx</code>, <code>ry</code>).</li>
-<li>Support for using <code>getInitialState</code> and <code>getDefaultProps</code> in mixins.</li>
-<li>Support mounting into iframes.</li>
-<li>Bug fixes for controlled form components.</li>
-<li>Bug fixes for SVG element creation.</li>
-<li>Added <code>React.version</code>.</li>
-<li>Added <code>React.isValidClass</code> - Used to determine if a value is a valid component constructor.</li>
-<li>Removed <code>React.autoBind</code> - This was deprecated in v0.4 and now properly removed.</li>
-<li>Renamed  <code>React.unmountAndReleaseReactRootNode</code> to <code>React.unmountComponentAtNode</code>.</li>
-<li>Began laying down work for refined performance analysis.</li>
-<li>Better support for server-side rendering - <a href="https://github.com/facebook/react-page">react-page</a> has helped improve the stability for server-side rendering.</li>
-<li>Made it possible to use React in environments enforcing a strict <a href="https://developer.mozilla.org/en-US/docs/Security/CSP/Introducing_Content_Security_Policy">Content Security Policy</a>. This also makes it possible to use React to build Chrome extensions.</li>
-</ul>
-<h3><a class="anchor" name="react-with-addons-new"></a>React with Addons (New!) <a class="hash-link" href="#react-with-addons-new">#</a></h3>
-<ul>
-<li>Introduced a separate build with several &quot;addons&quot; which we think can help improve the React experience. We plan to deprecate this in the long-term, instead shipping each as standalone pieces. <a href="/react/docs/addons.html">Read more in the docs</a>.</li>
-</ul>
-<h3><a class="anchor" name="jsx"></a>JSX <a class="hash-link" href="#jsx">#</a></h3>
-<ul>
-<li>No longer transform <code>class</code> to <code>className</code> as part of the transform! This is a breaking change - if you were using <code>class</code>, you <em>must</em> change this to <code>className</code> or your components will be visually broken.</li>
-<li>Added warnings to the in-browser transformer to make it clear it is not intended for production use.</li>
-<li>Improved compatibility for Windows</li>
-<li>Improved support for maintaining line numbers when transforming.</li>
-</ul>
+</h1>
 
-        </div>
-      </div>
+<p class="meta">
+  March 30, 2015
+  by
+  
     
-      <div class="post-list-item">
-        <h1><a href="/react/blog/2013/10/03/community-roundup-9.html">Community Round-up #9</a></h1>
-        <p class="meta">October  3, 2013 by Vjeux</p>
-        <hr />
-        <div class="post">
-         <p>We organized a React hackathon last week-end in the Facebook Seattle office. 50 people, grouped into 15 teams, came to hack for a day on React. It was a lot of fun and we&#39;ll probably organize more in the future.</p>
-
-<p><img src="/react/img/blog/react-hackathon.jpg" alt=""></p>
-<h2><a class="anchor" name="react-hackathon-winner"></a>React Hackathon Winner <a class="hash-link" href="#react-hackathon-winner">#</a></h2>
-<p><a href="http://bold-it.com/">Alex Swan</a> implemented <a href="http://qu.izti.me/">Qu.izti.me</a>, a multi-player quiz game. It is real-time via Web Socket and mobile friendly.</p>
-
-<blockquote>
-<p>The game itself is pretty simple. People join the &quot;room&quot; by going to <a href="http://qu.izti.me/">http://qu.izti.me</a> on their device. Large displays will show a leaderboard along with the game, and small displays (such as phones) will act as personal gamepads. Users will see questions and a choice of answers. The faster you answer, the more points you earn.</p>
-
-<p>In my opinion, Socket.io and React go together like chocolate and peanut butter. The page was always an accurate representation of the game object.
-<figure><a href="http://bold-it.com/javascript/facebook-react-example/"><img src="/react/img/blog/quiztime.png" alt=""></a></figure></p>
-
-<p><a href="http://bold-it.com/javascript/facebook-react-example/">Read More...</a></p>
-</blockquote>
-<h2><a class="anchor" name="jsconf-eu-talk-rethinking-best-practices"></a>JSConf EU Talk: Rethinking Best Practices <a class="hash-link" href="#jsconf-eu-talk-rethinking-best-practices">#</a></h2>
-<p><a href="http://www.petehunt.net/">Pete Hunt</a> presented React at JSConf EU. He covers three controversial design decisions of React:</p>
-
-<ol>
-<li>Build <strong>components</strong>, not templates</li>
-<li>Re-render the whole app on every update</li>
-<li>Virtual DOM</li>
-</ol>
-
-<p>The video will be available soon on the <a href="http://2013.jsconf.eu/speakers/pete-hunt-react-rethinking-best-practices.html">JSConf EU website</a>, but in the meantime, here are Pete&#39;s slides:</p>
-
-<figure><iframe src="http://www.slideshare.net/slideshow/embed_code/26589373" width="550" height="450" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe></figure>
-<h2><a class="anchor" name="pump---clojure-bindings-for-react"></a>Pump - Clojure bindings for React <a class="hash-link" href="#pump---clojure-bindings-for-react">#</a></h2>
-<p><a href="http://solovyov.net/">Alexander Solovyov</a> has been working on React bindings for ClojureScript. This is really exciting as it is using &quot;native&quot; ClojureScript data structures.</p>
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">(</span><span class="n">ns</span> <span class="n">your</span><span class="o">.</span><span class="n">app</span>
-  <span class="p">(</span><span class="ss">:require</span><span class="o">-</span><span class="n">macros</span> <span class="o">[</span><span class="n">pump</span><span class="o">.</span><span class="n">def</span><span class="o">-</span><span class="n">macros</span> <span class="ss">:refer</span> <span class="o">[</span><span class="n">defr</span><span class="o">]]</span><span class="p">)</span>
-  <span class="p">(</span><span class="ss">:require</span> <span class="o">[</span><span class="n">pump</span><span class="o">.</span><span class="n">core</span><span class="o">]</span><span class="p">))</span>
-
-<span class="p">(</span><span class="n">defr</span> <span class="no">Component</span>
-  <span class="ss">:get</span><span class="o">-</span><span class="n">initial</span><span class="o">-</span><span class="n">state</span> <span class="c1">#(identity {:some-value &quot;&quot;})</span>
-
-  <span class="o">[</span><span class="n">component</span> <span class="n">props</span> <span class="n">state</span><span class="o">]</span>
-
-  <span class="o">[</span><span class="ss">:div</span> <span class="p">{</span><span class="ss">:class</span><span class="o">-</span><span class="nb">name</span> <span class="s2">&quot;test&quot;</span><span class="p">}</span> <span class="s2">&quot;hello&quot;</span><span class="o">]</span><span class="p">)</span>
-</code></pre></div>
-<p><a href="https://github.com/piranha/pump">Check it out on GitHub...</a></p>
-<h2><a class="anchor" name="jsxhint"></a>JSXHint <a class="hash-link" href="#jsxhint">#</a></h2>
-<p><a href="http://blog.selfassembled.org/">Todd Kennedy</a> working at <a href="http://www.condenast.com/">Cond&eacute; Nast</a> implemented a wrapper on-top of <a href="http://www.jshint.com/">JSHint</a> that first converts JSX files to JS.</p>
-
-<blockquote>
-<p>A wrapper around JSHint to allow linting of files containg JSX syntax. Accepts glob patterns. Respects your local .jshintrc file and .gitignore to filter your glob patterns.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">npm install -g jsxhint
-</code></pre></div>
-<p><a href="https://github.com/CondeNast/JSXHint">Check it out on GitHub...</a></p>
-</blockquote>
-<h2><a class="anchor" name="turbo-react"></a>Turbo React <a class="hash-link" href="#turbo-react">#</a></h2>
-<p><a href="https://twitter.com/ssorallen">Ross Allen</a> working at <a href="http://mesosphere.io/">Mesosphere</a> combined <a href="https://github.com/rails/turbolinks/">Turbolinks</a>, a library used by Ruby on Rails to speed up page transition, and React.</p>
-
-<blockquote>
-<p>&quot;Re-request this page&quot; is just a link to the current page. When you click it, Turbolinks intercepts the GET request and fetchs the full page via XHR.</p>
-
-<p>The panel is rendered with a random panel- class on each request, and the progress bar gets a random widthX class.</p>
-
-<p>With Turbolinks alone, the entire <body> would be replaced, and transitions would not happen. In this little demo though, React adds and removes classes and text, and the attribute changes are animated with CSS transitions. The DOM is otherwise left intact.
-<figure><a href="https://turbo-react.herokuapp.com/"><img src="/react/img/blog/turboreact.png" alt=""></a></figure></p>
-
-<p><a href="https://turbo-react.herokuapp.com/">Check out the demo...</a></p>
-</blockquote>
-<h2><a class="anchor" name="reactive-table"></a>Reactive Table <a class="hash-link" href="#reactive-table">#</a></h2>
-<p><a href="http://www.phpied.com/">Stoyan Stefanov</a> continues his series of blog posts about React. This one is an introduction tutorial on rendering a simple table with React.</p>
-
-<blockquote>
-<p>React is all about components. So let&#39;s build one.</p>
-
-<p>Let&#39;s call it Table (to avoid any confusion what the component is about).</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">Table</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
-  <span class="cm">/*stuff goeth here*/</span>
-<span class="p">});</span>
-</code></pre></div>
-<p>You see that React components are defined using a regular JS object. Some properties and methods of the object such as render() have special meanings, the rest is upforgrabs.</p>
-
-<p><a href="http://www.phpied.com/reactive-table/">Read the full article...</a></p>
-</blockquote>
-
-        </div>
-      </div>
+      <a href="https://twitter.com/vjeux">Vjeux</a>
     
-      <div class="post-list-item">
-        <h1><a href="/react/blog/2013/09/24/community-roundup-8.html">Community Round-up #8</a></h1>
-        <p class="meta">September 24, 2013 by Vjeux</p>
-        <hr />
-        <div class="post">
-         <p>A lot has happened in the month since our last update. Here are some of the more interesting things we&#39;ve found. But first, we have a couple updates before we share links.</p>
+    
+  
+</p>
 
-<p>First, we are organizing a <a href="http://reactjshack-a-thon.splashthat.com/">React Hackathon</a> in Facebook&#39;s Seattle office on Saturday September 28. If you want to hack on React, meet some of the team or win some prizes, feel free to join us!</p>
+<hr>
 
-<p>We&#39;ve also reached a point where there are too many questions for us to handle directly. We&#39;re encouraging people to ask questions on <a href="http://stackoverflow.com/questions/tagged/reactjs">StackOverflow</a> using the tag <a href="http://stackoverflow.com/questions/tagged/reactjs">[reactjs]</a>. Many members of the team and community have subscribed to the tag, so feel free to ask questions there. We think these will be more discoverable than Google Groups archives or IRC logs.</p>
-<h2><a class="anchor" name="javascript-jabber"></a>Javascript Jabber <a class="hash-link" href="#javascript-jabber">#</a></h2>
-<p><a href="http://www.petehunt.net/">Pete Hunt</a> and <a href="https://github.com/jordwalke">Jordan Walke</a> were interviewed on <a href="http://javascriptjabber.com/073-jsj-react-with-pete-hunt-and-jordan-walke/">Javascript Jabber</a> for an hour.  They go over many aspects of React such as 60 FPS, Data binding, Performance, Diffing Algorithm, DOM Manipulation, Node.js support, server-side rendering, JSX, requestAnimationFrame and the community. This is a gold mine of information about React.</p>
+<div class="post">
+  <p>We open sourced React Native last week and the community reception blew away all our expectations! So many of you tried it, made cool stuff with it, raised many issues and even submitted pull requests to fix them! The entire team wants to say thank you!</p>
 
-<blockquote>
-<p><strong>PETE:</strong>  So React was designed all around that. Conceptually, how you build a React app is that every time your data changes, it&#39;s like hitting the refresh button in a server-rendered app. What we do is we conceptually throw out all of the markup and event handlers that you&#39;ve registered and we reset the whole page and then we redraw the entire page. If you&#39;re writing a server-rendered app, handling updates is really easy because you hit the refresh button and you&#39;re pretty much guaranteed to get what you expect.</p>
+<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/hashtag/reactnative?src=hash">#reactnative</a> is like when you get a new expansion pack, and everybody is running around clueless about which NPC to talk to for the quests</p>&mdash; Ryan Florence (@ryanflorence) <a href="https://twitter.com/ryanflorence/status/581810423554543616">March 28, 2015</a></blockquote>
 
-<p><strong>MERRICK:</strong>  That&#39;s true. You don&#39;t get into these odd states.</p>
+<h2>When is React Native Android coming?</h2>
 
-<p><strong>PETE:</strong>  Exactly, exactly. In order to implement that, we communicate it as a fake DOM. What we&#39;ll do is rather than throw out the actual browser html and event handlers, we have an internal representation of what the page looks like and then we generate a brand new representation of what we want the page to look like. Then we perform this really, really fast diffing algorithm between those two page representations, DOM representations. Then React will compute the minimum set of DOM mutations it needs to make to bring the page up to date.</p>
+<p><strong>Give us 6 months</strong>. At Facebook, we strive to only open-source projects that we are using in production. While the Android backend for React Native is starting to work (see video below at 37min), it hasn&#39;t been shipped to any users yet. There&#39;s a lot of work that goes into open-sourcing a project, and we want to do it right so that you have a great experience when using it.</p>
 
-<p>Then to finally get to answer your question, that set of DOM mutations then goes into a queue and we can plug in arbitrary flushing strategies for that. For example, when we originally launched React in open source, every setState would immediately trigger a flush to the DOM. That wasn&#39;t part of the contract of setState, but that was just our strategy and it worked pretty well. Then this totally awesome open source contributor Ben Alpert at Khan Academy built a new batching strategy which would basically queue up every single DOM update and state change that happened within an event tick and would execute them in bulk at the end of the event tick.</p>
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/X6YbAKiLCLU?start=2220" frameborder="0" allowfullscreen></iframe>
 
-<p><a href="http://javascriptjabber.com/073-jsj-react-with-pete-hunt-and-jordan-walke/">Read the full conversation ...</a></p>
-</blockquote>
-<h2><a class="anchor" name="jsxtransformer-trick"></a>JSXTransformer Trick <a class="hash-link" href="#jsxtransformer-trick">#</a></h2>
-<p>While this is not going to work for all the attributes since they are camelCased in React, this is a pretty cool trick.</p>
+<h2>Ray Wenderlich - Property Finder</h2>
 
-<div style="margin-left: 74px;"><blockquote class="twitter-tweet"><p>Turn any DOM element into a React.js function: JSXTransformer.transform(&quot;/** <a href="https://twitter.com/jsx">@jsx</a> React.DOM */&quot; + element.innerHTML).code</p>&mdash; Ross Allen (@ssorallen) <a href="https://twitter.com/ssorallen/statuses/377105575441489920">September 9, 2013</a></blockquote></div>
+<p>If you are getting started with React Native, you should absolutely <a href="http://www.raywenderlich.com/99473/introducing-react-native-building-apps-javascript">use this tutorial</a> from Colin Eberhardt. It goes through all the steps to make a reasonably complete app.</p>
 
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<h2><a class="anchor" name="remarkable-react"></a>Remarkable React <a class="hash-link" href="#remarkable-react">#</a></h2>
-<p><a href="http://www.phpied.com/">Stoyan Stefanov</a> gave a talk at <a href="http://braziljs.com.br/">BrazilJS</a> about React and wrote an article with the content of the presentation. He goes through the difficulties of writting <em>active apps</em> using the DOM API and shows how React handles it.</p>
+<p><center>
+<a href="http://www.raywenderlich.com/99473/introducing-react-native-building-apps-javascript"><img src="/react/img/blog/property-finder.png" alt=""></a>
+</center></p>
 
-<blockquote>
-<p>So how does exactly React deal with it internally? Two crazy ideas - virtual DOM and synthetic events.</p>
+<p>Colin also <a href="http://blog.scottlogic.com/2015/03/26/react-native-retrospective.html">blogged about his experience using React Native</a> for a few weeks and gives his thoughts on why you would or wouldn&#39;t use it.</p>
 
-<p>You define you components in React. It builds a virtual DOM in JavaScript land which is way more efficient. Then it updates the DOM. (And &quot;virtual DOM&quot; is a very big name for what is simply a JavaScript object with nested key-value pairs)</p>
+<h2>The Changelog</h2>
 
-<p>Data changes. React computes a diff (in JavaScript land, which is, of course, much more efficient) and updates the single table cell that needs to change. React replicates the state of the virtual DOM into the actual DOM only when and where it&#39;s necessary. And does it all at once, in most cases in a single tick of the <code>requestAnimationFrame()</code>.</p>
+<p>Spencer Ahrens and I had the great pleasure to talk about React Native on <a href="https://thechangelog.com/149/">The Changelog</a> podcast. It was really fun to chat for an hour, I hope that you&#39;ll enjoy listening to it. :)</p>
 
-<p>What about event handlers? They are synthetic. React uses event delegation to listen way at the top of the React tree. So removing a node in the virtual DOM has no effect on the event handling.</p>
+<audio src="http://fdlyr.co/d/changelog/cdn.5by5.tv/audio/broadcasts/changelog/2015/changelog-149.mp3" controls="controls" style="width: 100%"></audio>
 
-<p>The events are automatically cross-browser (they are React events). They are also much closer to W3C than any browser. That means that for example <code>e.target</code> works, no need to look for the event object or checking whether it&#39;s <code>e.target</code> or <code>e.srcElement</code> (IE). Bubbling and capturing phases also work cross browser. React also takes the liberty of making some small fixes, e.g. the event <code>&lt;input onChange&gt;</code> fires when you type, not when blur away from the input. And of course, event delegation is used as the most efficient way to handle events. You know that &quot;thou shall use event delegation&quot; is also commonly given advice for making web apps snappy.</p>
+<h2>Hacker News</h2>
 
-<p>The good thing about the virtual DOM is that it&#39;s all in JavaScript land. You build all your UI in JavaScript. Which means it can be rendered on the server side, so you initial view is fast (and any SEO concerns are addressed). Also, if there are especially heavy operations they can be threaded into WebWorkers, which otherwise have no DOM access.</p>
+<p>Less than 24 hours after React Native was open sourced, Simarpreet Singh built an <a href="https://github.com/iSimar/HackerNews-React-Native">Hacker News reader app from scratch</a>. It&#39;s unbelievable how fast he was able to pull it off!</p>
 
-<p><a href="http://www.phpied.com/remarkable-react/">Read More ...</a></p>
-</blockquote>
-<h2><a class="anchor" name="markdown-in-react"></a>Markdown in React <a class="hash-link" href="#markdown-in-react">#</a></h2>
-<p><a href="http://benalpert.com/">Ben Alpert</a> converted <a href="https://github.com/chjj/marked">marked</a>, a Markdown Javascript implementation, in React: <a href="https://github.com/spicyj/marked-react">marked-react</a>. Even without using JSX, the HTML generation is now a lot cleaner. It is also safer as forgetting a call to <code>escape</code> will not introduce an XSS vulnerability.
-<figure><a href="https://github.com/spicyj/marked-react/commit/cb70c9df6542c7c34ede9efe16f9b6580692a457"><img src="/react/img/blog/markdown_refactor.png" alt=""></a></figure></p>
-<h2><a class="anchor" name="unite-from-bugbusters"></a>Unite from BugBusters <a class="hash-link" href="#unite-from-bugbusters">#</a></h2>
-<p><a href="https://twitter.com/renajohn">Renault John Lecoultre</a> wrote <a href="https://www.bugbuster.com/">Unite</a>, an interactive tool for analyzing code dynamically using React. It integrates with CodeMirror.
-<figure><a href="https://unite.bugbuster.com/"><img src="/react/img/blog/unite.png" alt=""></a></figure></p>
-<h2><a class="anchor" name="reactjs-irc-logs"></a>#reactjs IRC Logs <a class="hash-link" href="#reactjs-irc-logs">#</a></h2>
-<p><a href="http://blog.vjeux.com/">Vjeux</a> re-implemented the display part of the IRC logger in React. Just 130 lines are needed for a performant infinite scroll with timestamps and color-coded author names.</p>
+<p><center>
+<a href="https://github.com/iSimar/HackerNews-React-Native"><img src="/react/img/blog/hacker-news-react-native.png" alt=""></a>
+</center></p>
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/vjeux/QL9tz/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<h2>Parse + React</h2>
 
-        </div>
+<p>There&#39;s a huge ecosystem of JavaScript modules on npm and React Native was designed to work well with the ones that don&#39;t have DOM dependencies. Parse is a great example; you can <code>npm install parse</code> on your React Native project and it&#39;ll work as is. :) We still have <a href="https://github.com/facebook/react-native/issues/406">a</a> <a href="https://github.com/facebook/react-native/issues/370">few</a> <a href="https://github.com/facebook/react-native/issues/316">issues</a> to solve; please create an issue if your favorite library doesn&#39;t work out of the box.</p>
+
+<p><center>
+<a href="http://blog.parse.com/2015/03/25/parse-and-react-shared-chemistry/"><img src="/react/img/blog/parse-react.jpg" alt=""></a>
+</center></p>
+
+<h2>tcomb-form-native</h2>
+
+<p>Giulio Canti is the author of the <a href="https://github.com/gcanti/tcomb-form">tcomb-form library</a> for React. He already <a href="https://github.com/gcanti/tcomb-form-native">ported it to React Native</a> and it looks great!</p>
+
+<p><center>
+<a href="https://github.com/gcanti/tcomb-form-native"><img src="/react/img/blog/tcomb-react-native.png" alt=""></a>
+</center></p>
+
+<h2>Facebook Login with React Native</h2>
+
+<p>One of the reason we built React Native is to be able to use all the libraries in the native ecosystem. Brent Vatne leads the way and explains <a href="http://brentvatne.ca/facebook-login-with-react-native/">how to use Facebook Login with React Native</a>.</p>
+
+<h2>Modus Create</h2>
+
+<p>Jay Garcia spent a lot of time during the beta working on a NES music player with React Native. He wrote a blog post to share his experience and explains some code snippets.</p>
+
+<p><center>
+<a href="http://moduscreate.com/react-native-has-landed/"><img src="/react/img/blog/modus-create.gif" alt=""></a>
+</center></p>
+
+<h2>React Native with Babel and webpack</h2>
+
+<p>React Native ships with a custom packager and custom ES6 transforms instead of using what the open source community settled on such as webpack and Babel. The main reason for this is performance – we couldn&#39;t get those tools to have sub-second reload time on a large codebase.</p>
+
+<p>Roman Liutikov found a way to <a href="https://github.com/roman01la/react-native-babel">use webpack and Babel to run on React Native</a>! In the future, we want to work with those projects to provide cleaner extension mechanisms.</p>
+
+<h2>A Dynamic, Crazy, Native Mobile Future—Powered by JavaScript</h2>
+
+<p>Clay Allsopp wrote a post about <a href="https://medium.com/@clayallsopp/a-dynamic-crazy-native-mobile-future-powered-by-javascript-70f2d56b1987">all the crazy things you could do with a JavaScript engine that renders native views</a>. What about native embeds, seamless native browser, native search engine or even app generation...</p>
+
+<h2>Random Tweet</h2>
+
+<p>We&#39;ve spent a lot of efforts getting the onboarding as easy as possible and we&#39;re really happy that people noticed. We still have a lot of work to do on documentation, stay tuned!</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>Wow. Getting started with React Native might have been the smoothest experience I’ve ever had with a new developer product.</p>&mdash; Andreas Eldh (@eldh) <a href="https://twitter.com/eldh/status/581186172094980096">March 26, 2015</a></blockquote>
+
+</div>
+
+
+
       </div>
     
 
@@ -473,19 +569,52 @@
 </section>
 
 
-    <footer class="wrap">
-      <div class="left">
-        A Facebook &amp; Instagram collaboration.<br>
-        <a href="/react/acknowledgements.html">Acknowledgements</a>
-      </div>
-      <div class="right">
-        &copy; 2013&ndash;2014 Facebook Inc.<br>
-        Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
-      </div>
-    </footer>
-  </div>
-  <div id="fb-root"></div>
+    <footer class="nav-footer">
+  <section class="sitemap">
+    <a href="/react/" class="nav-home">
+    </a>
+    <div>
+      <h5><a href="/react/docs/">Docs</a></h5>
+      <a href="/react/docs/hello-world.html">Quick Start</a>
+      <a href="/react/docs/thinking-in-react.html">Thinking in React</a>
+      <a href="/react/tutorial/tutorial.html">Tutorial</a>
+      <a href="/react/docs/jsx-in-depth.html">Advanced Guides</a>
+    </div>
+    <div>
+      <h5><a href="/react/community/support.html">Community</a></h5>
+      <a href="http://stackoverflow.com/questions/tagged/reactjs" target="_blank">Stack Overflow</a>
+      <a href="https://discuss.reactjs.org/" target="_blank">Discussion Forum</a>
+      <a href="https://discord.gg/0ZcbPKXt5bZjGY5n" target="_blank">Reactiflux Chat</a>
+      <a href="https://www.facebook.com/react" target="_blank">Facebook</a>
+      <a href="https://twitter.com/reactjs" target="_blank">Twitter</a>
+    </div>
+    <div>
+      <h5><a href="/react/community/support.html">Resources</a></h5>
+      <a href="/react/community/conferences.html">Conferences</a>
+      <a href="/react/community/videos.html">Videos</a>
+      <a href="https://github.com/facebook/react/wiki/Examples" target="_blank">Examples</a>
+      <a href="https://github.com/facebook/react/wiki/Complementary-Tools" target="_blank">Complementary Tools</a>
+    </div>
+    <div>
+      <h5>More</h5>
+      <a href="/react/blog/">Blog</a>
+      <a href="https://github.com/facebook/react" target="_blank">GitHub</a>
+      <a href="http://facebook.github.io/react-native/" target="_blank">React Native</a>
+      <a href="/react/acknowledgements.html">Acknowledgements</a>
+    </div>
+  </section>
+  <a href="https://code.facebook.com/projects/" target="_blank" class="fbOpenSource">
+    <img src="/react/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/>
+  </a>
+  <section class="copyright">
+    Copyright © 2017 Facebook Inc.
+  </section>
+</footer>
 
+  </div>
+
+  <div id="fb-root"></div>
+  <script src="/react/js/anchor-links.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -500,9 +629,15 @@
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=623268441017527";
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=623268441017527";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+
+    docsearch({
+      apiKey: '36221914cce388c46d0420343e0bb32e',
+      indexName: 'react',
+      inputSelector: '#algolia-doc-search'
+    });
   </script>
 </body>
 </html>

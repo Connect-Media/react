@@ -1,61 +1,76 @@
+
+
 <!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Blog | React</title>
-  <meta name="viewport" content="width=device-width">
-  <meta property="og:title" content="Blog | React">
+  <title>Blog - React</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Blog - React">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://facebook.github.io/react/blog/page5/index.html">
-  <meta property="og:image" content="http://facebook.github.io/react/img/logo_og.png">
+  <meta property="og:url" content="https://facebook.github.io/react/blog/page5/">
+  <meta property="og:image" content="https://facebook.github.io/react/img/logo_og.png">
   <meta property="og:description" content="A JavaScript library for building user interfaces">
   <meta property="fb:app_id" content="623268441017527">
 
   <link rel="shortcut icon" href="/react/favicon.ico">
-  <link rel="alternate" type="application/rss+xml" title="React" href="http://facebook.github.io/react/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="React" href="https://facebook.github.io/react/feed.xml">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
   <link rel="stylesheet" href="/react/css/syntax.css">
   <link rel="stylesheet" href="/react/css/codemirror.css">
   <link rel="stylesheet" href="/react/css/react.css">
 
-  <script type="text/javascript" src="//use.typekit.net/vqa1hcx.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="//use.typekit.net/vqa1hcx.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
 
   <!--[if lte IE 8]>
-  <script type="text/javascript" src="/react/js/html5shiv.min.js"></script>
-  <script type="text/javascript" src="/react/js/es5-shim.min.js"></script>
-  <script type="text/javascript" src="/react/js/es5-sham.min.js"></script>
+  <script src="https://unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://unpkg.com/es5-shim@4.5.9/es5-shim.min.js"></script>
+  <script src="https://unpkg.com/es5-shim@4.5.9/es5-sham.min.js"></script>
   <![endif]-->
-  <script type="text/javascript" src="/react/js/codemirror.js"></script>
-  <script type="text/javascript" src="/react/js/javascript.js"></script>
-  <script type="text/javascript" src="/react/js/react.js"></script>
-  <script type="text/javascript" src="/react/js/JSXTransformer.js"></script>
-  <script type="text/javascript" src="/react/js/live_editor.js"></script>
-  <script type="text/javascript" src="/react/js/showdown.js"></script>
+  <script src="https://unpkg.com/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
+  <script src="https://unpkg.com/codemirror@5.15.2"></script>
+  <script src="https://unpkg.com/codemirror@5.15.2/mode/javascript/javascript.js"></script>
+  <script src="https://unpkg.com/codemirror@5.15.2/mode/xml/xml.js"></script>
+  <script src="https://unpkg.com/codemirror@5.15.2/mode/jsx/jsx.js"></script>
+  <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+  <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/create-react-class/create-react-class.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <script src="/react/js/live_editor.js"></script>
 </head>
 <body>
 
   <div class="container">
 
     <div class="nav-main">
-      <div class="wrap">
-        <a class="nav-home" href="/react/index.html">
-          <img class="nav-logo" src="/react/img/logo.svg" width="36" height="36">
-          React
-        </a>
-        <ul class="nav-site">
-          <li><a href="/react/docs/getting-started.html">docs</a></li>
-          <li><a href="/react/support.html">support</a></li>
-          <li><a href="/react/downloads.html">download</a></li>
-          <li><a href="/react/blog/" class="active">blog</a></li>
-          <li><a href="http://github.com/facebook/react">github</a>
-        </ul>
-      </div>
+  <div class="wrap">
+    <a class="nav-home" href="/react/">
+      <img class="nav-logo" src="/react/img/logo.svg" width="36" height="36">
+      React
+    </a>
+    <div class="nav-lists">
+      <ul class="nav-site nav-site-internal">
+        <li><a href="/react/docs/hello-world.html">Docs</a></li>
+        <li><a href="/react/tutorial/tutorial.html">Tutorial</a></li>
+        <li><a href="/react/community/support.html">Community</a></li>
+        <li><a href="/react/blog/" class="active">Blog</a></li>
+        <li class="nav-site-search">
+          <input id="algolia-doc-search" type="text" placeholder="Search docs..." />
+        </li>
+      </ul>
+      <ul class="nav-site nav-site-external">
+        <li><a href="https://github.com/facebook/react">GitHub</a></li>
+        <li><a href="https://github.com/facebook/react/releases">v16.0.0</a></li>
+      </ul>
     </div>
+  </div>
+</div>
 
-    
 
     <section class="content wrap blogContent">
   <div class="nav-docs nav-blog">
@@ -63,25 +78,25 @@
     <h3>Recent posts</h3>
     <ul>
       
-        <li><a href="/react/blog/2014/12/19/react-js-conf-diversity-scholarship.html">React.js Conf Diversity Scholarship</a></li>
+        <li><a href="/react/blog/2017/09/26/react-v16.0.html">React v16.0</a></li>
       
-        <li><a href="/react/blog/2014/12/18/react-v0.12.2.html">React v0.12.2</a></li>
+        <li><a href="/react/blog/2017/09/25/react-v15.6.2.html">React v15.6.2</a></li>
       
-        <li><a href="/react/blog/2014/11/25/community-roundup-24.html">Community Round-up #24</a></li>
+        <li><a href="/react/blog/2017/09/08/dom-attributes-in-react-16.html">DOM Attributes in React 16</a></li>
       
-        <li><a href="/react/blog/2014/11/24/react-js-conf-updates.html">React.js Conf Updates</a></li>
+        <li><a href="/react/blog/2017/07/26/error-handling-in-react-16.html">Error Handling in React 16</a></li>
       
-        <li><a href="/react/blog/2014/10/28/react-v0.12.html">React v0.12</a></li>
+        <li><a href="/react/blog/2017/06/13/react-v15.6.0.html">React v15.6.0</a></li>
       
-        <li><a href="/react/blog/2014/10/27/react-js-conf.html">React.js Conf</a></li>
+        <li><a href="/react/blog/2017/05/18/whats-new-in-create-react-app.html">What's New in Create React App</a></li>
       
-        <li><a href="/react/blog/2014/10/17/community-roundup-23.html">Community Round-up #23</a></li>
+        <li><a href="/react/blog/2017/04/07/react-v15.5.0.html">React v15.5.0</a></li>
       
-        <li><a href="/react/blog/2014/10/16/react-v0.12-rc1.html">React v0.12 RC</a></li>
+        <li><a href="/react/blog/2016/11/16/react-v15.4.0.html">React v15.4.0</a></li>
       
-        <li><a href="/react/blog/2014/10/14/introducing-react-elements.html">Introducing React Elements</a></li>
+        <li><a href="/react/blog/2016/09/28/our-first-50000-stars.html">Our First 50,000 Stars</a></li>
       
-        <li><a href="/react/blog/2014/09/24/testing-flux-applications.html">Testing Flux Applications</a></li>
+        <li><a href="/react/blog/2016/08/05/relay-state-of-the-state.html">Relay: State of the State</a></li>
       
       <li><a href="/react/blog/all.html">All posts ...</a></li>
     </ul>
@@ -91,193 +106,705 @@
   <div class="inner-content">
     
       <div class="post-list-item">
-        <h1><a href="/react/blog/2014/05/29/one-year-of-open-source-react.html">One Year of Open-Source React</a></h1>
-        <p class="meta">May 29, 2014 by Cheng Lou</p>
-        <hr />
-        <div class="post">
-         <p>Today marks the one-year open-source anniversary of React.</p>
+        
 
-<p>It’s been a crazy ride. 2.3k commits and 1.5k issues and pull requests later, we’re approaching version 1.0 and nearing 7k Github stars, with big names such as Khan Academy, New York Times, and Airbnb (and naturally, Facebook and Instagram) using React in production, and many more developers blogging their success stories with it. The <a href="http://facebook.github.io/react/blog/2014/03/28/the-road-to-1.0.html">roadmap</a> gives a glimpse into the future of the library; exciting stuff lies ahead!</p>
+<h1>
 
-<p>Every success has its story. React was born out of our frustration at existing solutions for building UIs. When it was first suggested at Facebook, few people thought that functionally re-rendering everything and diffing the results could ever perform well. However, support grew after we built the first implementation and people wrote their first components. When we open-sourced React, the initial reception was <a href="http://www.reddit.com/r/programming/comments/1fak87/react_facebooks_latest_javascript_client_library/">similarly skeptical</a>. It challenges many pre-established conventions and received mostly disapproving first-impressions, intermingled with positive ones that often were votes of confidence in Facebook’s engineering capabilities. On an open, competitive platform such as the web, it&#39;s been hard to convince people to try React. <a href="http://facebook.github.io/react/docs/jsx-in-depth.html">JSX</a>, in particular, filtered out a huge chunk of potential early adopters.</p>
+  <a href="/react/blog/2016/01/08/A-implies-B-does-not-imply-B-implies-A.html">(A => B) !=> (B => A)</a>
 
-<p>Fast forward one year, React has strongly <a href="https://news.ycombinator.com/item?id=7489959">grown in popularity</a>. Special acknowledgments go to Khan Academy, the ClojureScript community, and established frameworks such as Ember and Angular for contributing to and debating on our work. We&#39;d also like to thank all the <a href="https://github.com/facebook/react/graphs/contributors">individual contributors</a> who have taken the time to help out over the past year. React, as a library and as a new paradigm on the web, wouldn&#39;t have gained as much traction without them. In the future, we will continue to try to set an example of what&#39;s possible to achieve when we rethink about current “best practices”.</p>
+</h1>
 
-<p>Here’s to another year!</p>
-
-        </div>
-      </div>
+<p class="meta">
+  January  8, 2016
+  by
+  
     
-      <div class="post-list-item">
-        <h1><a href="/react/blog/2014/05/06/flux.html">Flux: An Application Architecture for React</a></h1>
-        <p class="meta">May  6, 2014 by Bill Fisher and Jing Chen</p>
-        <hr />
-        <div class="post">
-         <p>We recently spoke at one of f8&#39;s breakout session about Flux, a data flow architecture that works well with React.  Check out the video here:</p>
-
-<figure><iframe width="560" height="315" src="//www.youtube.com/embed/nYkdrAPrdcw?list=PLb0IAmt7-GS188xDYE-u1ShQmFFGbrk0v&start=621" frameborder="0" allowfullscreen></iframe></figure>
-
-<p>To summarize, Flux works well for us because the single directional data flow makes it easy to understand and modify an application as it becomes more complicated. We found that two-way data bindings lead to cascading updates, where changing one data model led to another data model updating, making it very difficult to predict what would change as the result of a single user interaction.</p>
-
-<p>In Flux, the Dispatcher is a singleton that directs the flow of data and ensures that updates do not cascade. As an application grows, the Dispatcher becomes more vital, as it can also manage dependencies between stores by invoking the registered callbacks in a specific order.</p>
-
-<p>When a user interacts with a React view, the view sends an action (usually represented as a JavaScript object with some fields) through the dispatcher, which notifies the various stores that hold the application&#39;s data and business logic. When the stores change state, they notify the views that something has updated. This works especially well with React&#39;s declarative model, which allows the stores to send updates without specifying how to transition views between states.</p>
-
-<p>Flux is more of a pattern than a formal framework, so you can start using Flux immediately without a lot of new code. An <a href="https://github.com/facebook/flux/tree/master/examples/flux-todomvc">example of this architecture</a> is available, along with more <a href="http://facebook.github.io/flux/docs/overview.html">detailed documentation</a> and a <a href="http://facebook.github.io/flux/docs/todo-list.html">tutorial</a>. Look for more examples to come in the future.</p>
-
-        </div>
-      </div>
+      <a href="http://www.jimsproch.com">Jim Sproch</a>
     
-      <div class="post-list-item">
-        <h1><a href="/react/blog/2014/04/04/reactnet.html">Use React and JSX in ASP.NET MVC</a></h1>
-        <p class="meta">April  4, 2014 by Daniel Lo Nigro</p>
-        <hr />
-        <div class="post">
-         <p>Today we&#39;re happy to announce the initial release of
-<a href="http://reactjs.net/">ReactJS.NET</a>, which makes it easier to use React and JSX
-in .NET applications, focusing specifically on ASP.NET MVC web applications.
-It has several purposes:</p>
-
-<ul>
-<li>On-the-fly JSX to JavaScript compilation. Simply reference JSX files and they
-will be compiled and cached server-side.</li>
-</ul>
-<div class="highlight"><pre><code class="language-html" data-lang="html">   <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;@Url.Content(&quot;</span><span class="err">/</span><span class="na">Scripts</span><span class="err">/</span><span class="na">HelloWorld</span><span class="err">.</span><span class="na">jsx</span><span class="err">&quot;)&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div>
-<ul>
-<li>JSX to JavaScript compilation via popular minification/combination libraries
-(Cassette and ASP.NET Bundling and Minification). This is suggested for
-production websites.</li>
-<li>Server-side component rendering to make your initial render super fast.</li>
-</ul>
-
-<p>Even though we are focusing on ASP.NET MVC, ReactJS.NET can also be used in
-Web Forms applications as well as non-web applications (for example, in build
-scripts). ReactJS.NET currently only works on Microsoft .NET but we are working
-on support for Linux and Mac OS X via Mono as well.</p>
-<h2><a class="anchor" name="installation"></a>Installation <a class="hash-link" href="#installation">#</a></h2>
-<p>ReactJS.NET is packaged in NuGet. Simply run <code>Install-Package React.Mvc4</code> in the
-package manager console or search NuGet for &quot;React&quot; to install it.
-<a href="http://reactjs.net/docs">See the documentation</a> for more information. The
-GitHub project contains
-<a href="https://github.com/reactjs/React.NET/tree/master/src/React.Sample.Mvc4">a sample website</a>
-demonstrating all of the features.</p>
-
-<p>Let us know what you think, and feel free to send through any feedback and
-report bugs <a href="https://github.com/reactjs/React.NET">on GitHub</a>.</p>
-
-        </div>
-      </div>
     
-      <div class="post-list-item">
-        <h1><a href="/react/blog/2014/03/28/the-road-to-1.0.html">The Road to 1.0</a></h1>
-        <p class="meta">March 28, 2014 by Paul O'Shannessy</p>
-        <hr />
-        <div class="post">
-         <p>When we launched React last spring, we purposefully decided not to call it 1.0. It was production ready, but we had plans to evolve APIs and behavior as we saw how people were using React, both internally and externally. We&#39;ve learned a lot over the past 9 months and we&#39;ve thought a lot about what 1.0 will mean for React. A couple weeks ago, I outlined <a href="https://github.com/facebook/react/wiki/Projects">several projects</a> that we have planned to take us to 1.0 and beyond. Today I&#39;m writing a bit more about them to give our users a better insight into our plans.</p>
+  
+</p>
 
-<p>Our primary goal with 1.0 is to clarify our messaging and converge on an API that is aligned with our goals. In order to do that, we want to clean up bad patterns we&#39;ve seen in use and really help enable developers write good code.</p>
-<h2><a class="anchor" name="descriptors"></a>Descriptors <a class="hash-link" href="#descriptors">#</a></h2>
-<p>The first part of this is what we&#39;re calling &quot;descriptors&quot;. I talked about this briefly in our <a href="http://facebook.github.io/react/blog/2014/03/21/react-v0.10.html">v0.10 announcements</a>. The goal here is to separate our virtual DOM representation from our use of it. Simply, this means the return value of a component (e.g. <code>React.DOM.div()</code>, <code>MyComponent()</code>) will be a simple object containing the information React needs to render. Currently the object returned is actually linked to React&#39;s internal representation of the component and even directly to the DOM element. This has enabled some bad patterns that are quite contrary to how we want people to use React. That&#39;s our failure.</p>
+<hr>
 
-<p>We added some warnings in v0.9 to start migrating some of these bad patterns. With v0.10 we&#39;ll catch more. You&#39;ll see more on this soon as we expect to ship v0.11 with descriptors.</p>
-<h2><a class="anchor" name="api-cleanup"></a>API Cleanup <a class="hash-link" href="#api-cleanup">#</a></h2>
-<p>This is really connected to everything. We want to keep the API as simple as possible and help developers <a href="http://blog.codinghorror.com/falling-into-the-pit-of-success/">fall into the pit of success</a>. Enabling bad patterns with bad APIs is not success.</p>
-<h2><a class="anchor" name="es6"></a>ES6 <a class="hash-link" href="#es6">#</a></h2>
-<p>Before we even launched React publicly, members of the team were talking about how we could leverage ES6, namely classes, to improve the experience of creating React components. Calling <code>React.createClass(...)</code> isn&#39;t great. We don&#39;t quite have the right answer here yet, but we&#39;re close. We want to make sure we make this as simple as possible. It could look like this:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">class</span> <span class="nx">MyComponent</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+<div class="post">
+  <p>The documentation for <code>componentWillReceiveProps</code> states that <code>componentWillReceiveProps</code> will be invoked when the props change as the result of a rerender. Some people assume this means &quot;if <code>componentWillReceiveProps</code> is called, then the props must have changed&quot;, but that conclusion is logically incorrect.</p>
+
+<p>The guiding principle is one of my favorites from formal logic/mathematics:</p>
+
+<blockquote>
+<p>A implies B does not imply B implies A</p>
+</blockquote>
+
+<p>Example: &quot;If I eat moldy food, then I will get sick&quot; does not imply &quot;if I am sick, then I must have eaten moldy food&quot;. There are many other reasons I could be feeling sick. For instance, maybe the flu is circulating around the office. Similarly, there are many reasons that <code>componentWillReceiveProps</code> might get called, even if the props didn’t change.</p>
+
+<p>If you don’t believe me, call <code>ReactDOM.render()</code> three times with the exact same props, and try to predict the number of times <code>componentWillReceiveProps</code> will get called:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">class</span> <span class="nx">Component</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">componentWillReceiveProps</span><span class="p">(</span><span class="nx">nextProps</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;componentWillReceiveProps&#39;</span><span class="p">,</span> <span class="nx">nextProps</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">bar</span><span class="p">);</span>
+  <span class="p">}</span>
   <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="p">...</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Bar</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">bar</span><span class="p">}</span><span class="o">!&lt;</span><span class="err">/div&gt;;</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div>
-<p>There are other features of ES6 we&#39;re already using in core. I&#39;m sure we&#39;ll see more of that. The <code>jsx</code> executable we ship with <code>react-tools</code> already supports transforming many parts of ES6 into code that will run on older browsers.</p>
-<h2><a class="anchor" name="context"></a>Context <a class="hash-link" href="#context">#</a></h2>
-<p>While we haven&#39;t documented <code>context</code>, it exists in some form in React already. It exists as a way to pass values through a tree without having to use props at every single point. We&#39;ve seen this need crop up time and time again, so we want to make this as easy as possible. It&#39;s use has performance tradeoffs, and there are known weaknesses in our implementation, so we want to make sure this is a solid feature.</p>
-<h2><a class="anchor" name="addons"></a>Addons <a class="hash-link" href="#addons">#</a></h2>
-<p>As you may know, we ship a separate build of React with some extra features we called &quot;addons&quot;. While this has served us fine, it&#39;s not great for our users. It&#39;s made testing harder, but also results in more cache misses for people using a CDN. The problem we face is that many of these &quot;addons&quot; need access to parts of React that we don&#39;t expose publicly. Our goal is to ship each addon on its own and let each hook into React as needed. This would also allow others to write and distribute &quot;addons&quot;.</p>
-<h2><a class="anchor" name="browser-support"></a>Browser Support <a class="hash-link" href="#browser-support">#</a></h2>
-<p>As much as we&#39;d all like to stop supporting older browsers, it&#39;s not always possible. Facebook still supports IE8. While React won&#39;t support IE8 forever, our goal is to have 1.0 support IE8. Hopefully we can continue to abstract some of these rough parts.</p>
-<h2><a class="anchor" name="animations"></a>Animations <a class="hash-link" href="#animations">#</a></h2>
-<p>Finding a way to define animations in a declarative way is a hard problem. We&#39;ve been exploring the space for a long time. We&#39;ve introduced some half-measures to alleviate some use cases, but the larger problem remains. While we&#39;d like to make this a part of 1.0, realistically we don&#39;t think we&#39;ll have a good solution in place.</p>
-<h2><a class="anchor" name="miscellaneous"></a>Miscellaneous <a class="hash-link" href="#miscellaneous">#</a></h2>
-<p>There are several other things I listed on <a href="https://github.com/facebook/react/wiki/Projects">our projects page</a> that we&#39;re tracking. Some of them are internals and have no obvious outward effect (improve tests, repo separation, updated test runner). I encourage you to take a look.</p>
 
-        </div>
+<span class="kd">var</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;container&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">mydata</span> <span class="o">=</span> <span class="p">{</span><span class="nx">bar</span><span class="o">:</span> <span class="s1">&#39;drinks&#39;</span><span class="p">};</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Component</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">mydata</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">container</span><span class="p">);</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Component</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">mydata</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">container</span><span class="p">);</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Component</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">mydata</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">container</span><span class="p">);</span>
+</code></pre></div>
+<p>In this case, the answer is &quot;2&quot;. React calls <code>componentWillReceiveProps</code> twice (once for each of the two updates). Both times, the value of &quot;drinks&quot; is printed (ie. the props didn’t change).</p>
+
+<p>To understand why, we need to think about what <em>could</em> have happened. The data <em>could</em> have changed between the initial render and the two subsequent updates, if the code had performed a mutation like this:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">mydata</span> <span class="o">=</span> <span class="p">{</span><span class="nx">bar</span><span class="o">:</span> <span class="s1">&#39;drinks&#39;</span><span class="p">};</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Component</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">mydata</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">container</span><span class="p">);</span>
+<span class="nx">mydata</span><span class="p">.</span><span class="nx">bar</span> <span class="o">=</span> <span class="s1">&#39;food&#39;</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Component</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">mydata</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">container</span><span class="p">);</span>
+<span class="nx">mydata</span><span class="p">.</span><span class="nx">bar</span> <span class="o">=</span> <span class="s1">&#39;noise&#39;</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Component</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">mydata</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">container</span><span class="p">);</span>
+</code></pre></div>
+<p>React has no way of knowing that the data didn’t change. Therefore, React needs to call <code>componentWillReceiveProps</code>, because the component needs to be notified of the new props (even if the new props happen to be the same as the old props).</p>
+
+<p>You might think that React could just use smarter checks for equality, but there are some issues with this idea:</p>
+
+<ul>
+<li>The old <code>mydata</code> and the new <code>mydata</code> are actually the same physical object (only the object’s internal value changed). Since the references are triple-equals-equal, doing an equality check doesn’t tell us if the value has changed. The only possible solution would be to have created a deep copy of the data, and then later do a deep comparison - but this can be prohibitively expensive for large data structures (especially ones with cycles).</li>
+<li>The <code>mydata</code> object might contain references to functions which have captured variables within closures. There is no way for React to peek into these closures, and thus no way for React to copy them and/or verify equality.</li>
+<li>The <code>mydata</code> object might contain references to objects which are re-instantiated during the parent&#39;s render (ie. not triple-equals-equal) but are conceptually equal (ie. same keys and same values). A deep-compare (expensive) could detect this, except that functions present a problem again because there is no reliable way to compare two functions to see if they are semantically equivalent.</li>
+</ul>
+
+<p>Given the language constraints, it is sometimes impossible for us to achieve meaningful equality semantics. In such cases, React will call <code>componentWillReceiveProps</code> (even though the props might not have changed) so the component has an opportunity to examine the new props and act accordingly.</p>
+
+<p>As a result, your implementation of <code>componentWillReceiveProps</code> MUST NOT assume that your props have changed. If you want an operation (such as a network request) to occur only when props have changed, your <code>componentWillReceiveProps</code> code needs to check to see if the props actually changed.</p>
+
+</div>
+
+
+
       </div>
     
       <div class="post-list-item">
-        <h1><a href="/react/blog/2014/03/21/react-v0.10.html">React v0.10</a></h1>
-        <p class="meta">March 21, 2014 by Paul O’Shannessy</p>
-        <hr />
-        <div class="post">
-         <p>Hot on the heels of the <a href="/react/blog/2014/03/19/react-v0.10-rc1.html">release candidate earlier this week</a>, we&#39;re ready to call v0.10 done. The only major issue we discovered had to do with the <code>react-tools</code> package, which has been updated. We&#39;ve copied over the changelog from the RC with some small clarifying changes.</p>
+        
 
-<p>The release is available for download from the CDN:</p>
+<h1>
+
+  <a href="/react/blog/2015/12/29/react-v0.14.4.html">React v0.14.4</a>
+
+</h1>
+
+<p class="meta">
+  December 29, 2015
+  by
+  
+    
+      <a href="https://sophiealpert.com">Sophie Alpert</a>
+    
+    
+  
+</p>
+
+<hr>
+
+<div class="post">
+  <p>Happy December! We have a minor point release today. It has just a few small bug fixes.</p>
+
+<p>The release is now available for download:</p>
 
 <ul>
 <li><strong>React</strong><br>
-Dev build with warnings: <a href="http://fb.me/react-0.10.0.js">http://fb.me/react-0.10.0.js</a><br>
-Minified build for production: <a href="http://fb.me/react-0.10.0.min.js">http://fb.me/react-0.10.0.min.js</a><br></li>
+Dev build with warnings: <a href="https://fb.me/react-0.14.4.js">https://fb.me/react-0.14.4.js</a><br>
+Minified build for production: <a href="https://fb.me/react-0.14.4.min.js">https://fb.me/react-0.14.4.min.js</a><br></li>
 <li><strong>React with Add-Ons</strong><br>
-Dev build with warnings: <a href="http://fb.me/react-with-addons-0.10.0.js">http://fb.me/react-with-addons-0.10.0.js</a><br>
-Minified build for production: <a href="http://fb.me/react-with-addons-0.10.0.min.js">http://fb.me/react-with-addons-0.10.0.min.js</a><br></li>
-<li><strong>In-Browser JSX transformer</strong><br>
-<a href="http://fb.me/JSXTransformer-0.10.0.js">http://fb.me/JSXTransformer-0.10.0.js</a></li>
+Dev build with warnings: <a href="https://fb.me/react-with-addons-0.14.4.js">https://fb.me/react-with-addons-0.14.4.js</a><br>
+Minified build for production: <a href="https://fb.me/react-with-addons-0.14.4.min.js">https://fb.me/react-with-addons-0.14.4.min.js</a><br></li>
+<li><strong>React DOM</strong> (include React in the page before React DOM)<br>
+Dev build with warnings: <a href="https://fb.me/react-dom-0.14.4.js">https://fb.me/react-dom-0.14.4.js</a><br>
+Minified build for production: <a href="https://fb.me/react-dom-0.14.4.min.js">https://fb.me/react-dom-0.14.4.min.js</a><br></li>
+<li><strong>React DOM Server</strong> (include React in the page before React DOM Server)<br>
+Dev build with warnings: <a href="https://fb.me/react-dom-server-0.14.4.js">https://fb.me/react-dom-server-0.14.4.js</a><br>
+Minified build for production: <a href="https://fb.me/react-dom-server-0.14.4.min.js">https://fb.me/react-dom-server-0.14.4.min.js</a><br></li>
 </ul>
 
-<p>We&#39;ve also published version <code>0.10.0</code> of the <code>react</code> and <code>react-tools</code> packages on npm and the <code>react</code> package on bower.</p>
+<p>We&#39;ve also published version <code>0.14.4</code> of the <code>react</code>, <code>react-dom</code>, and addons packages on npm and the <code>react</code> package on bower.</p>
 
-<p>Please try these builds out and <a href="https://github.com/facebook/react/issues/new">file an issue on GitHub</a> if you see anything awry.</p>
-<h2><a class="anchor" name="clone-on-mount"></a>Clone On Mount <a class="hash-link" href="#clone-on-mount">#</a></h2>
-<p>The main purpose of this release is to provide a smooth upgrade path as we evolve some of the implementation of core. In v0.9 we started warning in cases where you called methods on unmounted components. This is part of an effort to enforce the idea that the return value of a component (<code>React.DOM.div()</code>, <code>MyComponent()</code>) is in fact not a reference to the component instance React uses in the virtual DOM. The return value is instead a light-weight object that React knows how to use. Since the return value currently is a reference to the same object React uses internally, we need to make this transition in stages as many people have come to depend on this implementation detail.</p>
+<hr>
 
-<p>In 0.10, we’re adding more warnings to catch a similar set of patterns. When a component is mounted we clone it and use that object for our internal representation. This allows us to capture calls you think you’re making to a mounted component. We’ll forward them on to the right object, but also warn you that this is breaking. See “Access to the Mounted Instance” on <a href="http://fb.me/react-warning-descriptors">this page</a>. Most of the time you can solve your pattern by using refs.</p>
+<h2>Changelog</h2>
 
-<p>Storing a reference to your top level component is a pattern touched upon on that page, but another examples that demonstrates what we see a lot of:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// This is a common pattern. However instance here really refers to a</span>
-<span class="c1">// &quot;descriptor&quot;, not necessarily the mounted instance.</span>
-<span class="kd">var</span> <span class="nx">instance</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">MyComponent</span><span class="o">/&gt;</span><span class="p">;</span>
-<span class="nx">React</span><span class="p">.</span><span class="nx">renderComponent</span><span class="p">(</span><span class="nx">instance</span><span class="p">);</span>
-<span class="c1">// ...</span>
-<span class="nx">instance</span><span class="p">.</span><span class="nx">setProps</span><span class="p">(...);</span>
+<h3>React</h3>
 
-<span class="c1">// The change here is very simple. The return value of renderComponent will be</span>
-<span class="c1">// the mounted instance.</span>
-<span class="kd">var</span> <span class="nx">instance</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">renderComponent</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">MyComponent</span><span class="o">/&gt;</span><span class="p">)</span>
-<span class="c1">// ...</span>
-<span class="nx">instance</span><span class="p">.</span><span class="nx">setProps</span><span class="p">(...);</span>
+<ul>
+<li>Minor internal changes for better compatibility with React Native</li>
+</ul>
+
+<h3>React DOM</h3>
+
+<ul>
+<li>The <code>autoCapitalize</code> and <code>autoCorrect</code> props are now set as attributes in the DOM instead of properties to improve cross-browser compatibility</li>
+<li>Fixed bug with controlled <code>&lt;select&gt;</code> elements not handling updates properly</li>
+</ul>
+
+<h3>React Perf Add-on</h3>
+
+<ul>
+<li>Some DOM operation names have been updated for clarity in the output of <code>.printDOM()</code></li>
+</ul>
+
+</div>
+
+
+
+      </div>
+    
+      <div class="post-list-item">
+        
+
+<h1>
+
+  <a href="/react/blog/2015/12/18/react-components-elements-and-instances.html">React Components, Elements, and Instances</a>
+
+</h1>
+
+<p class="meta">
+  December 18, 2015
+  by
+  
+    
+      <a href="https://twitter.com/dan_abramov">Dan Abramov</a>
+    
+    
+  
+</p>
+
+<hr>
+
+<div class="post">
+  <p>The difference between <strong>components, their instances, and elements</strong> confuses many React beginners. Why are there three different terms to refer to something that is painted on screen?</p>
+
+<h2>Managing the Instances</h2>
+
+<p>If you’re new to React, you probably only worked with component classes and instances before. For example, you may declare a <code>Button</code> <em>component</em> by creating a class. When the app is running, you may have several <em>instances</em> of this component on screen, each with its own properties and local state. This is the traditional object-oriented UI programming. Why introduce <em>elements</em>?</p>
+
+<p>In this traditional UI model, it is up to you to take care of creating and destroying child component instances. If a <code>Form</code> component wants to render a <code>Button</code> component, it needs to create its instance, and manually keep it up to date with any new information.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">class</span> <span class="nx">Form</span> <span class="kr">extends</span> <span class="nx">TraditionalObjectOrientedView</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Read some data passed to the view</span>
+    <span class="kr">const</span> <span class="p">{</span> <span class="nx">isSubmitted</span><span class="p">,</span> <span class="nx">buttonText</span> <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">attrs</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isSubmitted</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">button</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Form is not yet submitted. Create the button!</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">button</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Button</span><span class="p">({</span>
+        <span class="nx">children</span><span class="o">:</span> <span class="nx">buttonText</span><span class="p">,</span>
+        <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;blue&#39;</span>
+      <span class="p">});</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">el</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">el</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">button</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// The button is visible. Update its text!</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">attrs</span><span class="p">.</span><span class="nx">children</span> <span class="o">=</span> <span class="nx">buttonText</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">isSubmitted</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">button</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Form was submitted. Destroy the button!</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">el</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">el</span><span class="p">);</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">destroy</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">isSubmitted</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Form was submitted. Show the success message!</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">message</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Message</span><span class="p">({</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Success!&#39;</span> <span class="p">});</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">el</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">message</span><span class="p">.</span><span class="nx">el</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>These warnings and method forwarding are only enabled in the development build. The production builds continue to work as they did in v0.9. We strongly encourage you to use the development builds to catch these warnings and fix the call sites.</p>
+<p>This is pseudocode, but it is more or less what you end up with when you write composite UI code that behaves consistently in an object-oriented way using a library like Backbone.</p>
 
-<p>The plan for v0.11 is that we will go fully to &quot;descriptors&quot;. Method calls on the return value of <code>MyComponent()</code> will fail hard.</p>
-<h2><a class="anchor" name="changelog"></a>Changelog <a class="hash-link" href="#changelog">#</a></h2><h3><a class="anchor" name="react-core"></a>React Core <a class="hash-link" href="#react-core">#</a></h3><h4><a class="anchor" name="new-features"></a>New Features <a class="hash-link" href="#new-features">#</a></h4>
-<ul>
-<li>Added warnings to help migrate towards descriptors</li>
-<li>Made it possible to server render without React-related markup (<code>data-reactid</code>, <code>data-react-checksum</code>). This DOM will not be mountable by React. <a href="/react/docs/top-level-api.html#react.rendercomponenttostaticmarkup">Read the docs for <code>React.renderComponentToStaticMarkup</code></a></li>
-<li>Added support for more attributes:
+<p>Each component instance has to keep references to its DOM node and to the instances of the children components, and create, update, and destroy them when the time is right. The lines of code grow as the square of the number of possible states of the component, and the parents have direct access to their children component instances, making it hard to decouple them in the future.</p>
+
+<p>So how is React different?</p>
+
+<h2>Elements Describe the Tree</h2>
+
+<p>In React, this is where the <em>elements</em> come to rescue. <strong>An element is a plain object <em>describing</em> a component instance or DOM node and its desired properties.</strong> It contains only information about the component type (for example, a <code>Button</code>), its properties (for example, its <code>color</code>), and any child elements inside it.</p>
+
+<p>An element is not an actual instance. Rather, it is a way to tell React what you <em>want</em> to see on the screen. You can’t call any methods on the element. It’s just an immutable description object with two fields: <code>type: (string | ReactClass)</code> and <code>props: Object</code><sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>.</p>
+
+<h3>DOM Elements</h3>
+
+<p>When an element’s <code>type</code> is a string, it represents a DOM node with that tag name, and <code>props</code> correspond to its attributes. This is what React will render. For example:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;button&#39;</span><span class="p">,</span>
+  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">className</span><span class="o">:</span> <span class="s1">&#39;button button-blue&#39;</span><span class="p">,</span>
+    <span class="nx">children</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
+      <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">children</span><span class="o">:</span> <span class="s1">&#39;OK!&#39;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This element is just a way to represent the following HTML as a plain object:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&#39;button button-blue&#39;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;b&gt;</span>
+    OK!
+  <span class="nt">&lt;/b&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+<p>Note how elements can be nested. By convention, when we want to create an element tree, we specify one or more child elements as the <code>children</code> prop of their containing element.</p>
+
+<p>What’s important is that both child and parent elements are <em>just descriptions and not the actual instances</em>. They don’t refer to anything on the screen when you create them. You can create them and throw them away, and it won’t matter much.</p>
+
+<p>React elements are easy to traverse, don’t need to be parsed, and of course they are much lighter than the actual DOM elements—they’re just objects!</p>
+
+<h3>Component Elements</h3>
+
+<p>However, the <code>type</code> of an element can also be a function or a class corresponding to a React component:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="nx">Button</span><span class="p">,</span>
+  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+    <span class="nx">children</span><span class="o">:</span> <span class="s1">&#39;OK!&#39;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This is the core idea of React.</p>
+
+<p><strong>An element describing a component is also an element, just like an element describing the DOM node. They can be nested and mixed with each other.</strong></p>
+
+<p>This feature lets you define a <code>DangerButton</code> component as a <code>Button</code> with a specific <code>color</code> property value without worrying about whether <code>Button</code> renders to a DOM <code>&lt;button&gt;</code>, a <code>&lt;div&gt;</code>, or something else entirely:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">DangerButton</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">children</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">({</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="nx">Button</span><span class="p">,</span>
+  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span>
+    <span class="nx">children</span><span class="o">:</span> <span class="nx">children</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>You can mix and match DOM and component elements in a single element tree:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">DeleteAccount</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">({</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;div&#39;</span><span class="p">,</span>
+  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">children</span><span class="o">:</span> <span class="p">[{</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;p&#39;</span><span class="p">,</span>
+      <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">children</span><span class="o">:</span> <span class="s1">&#39;Are you sure?&#39;</span>
+      <span class="p">}</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="nx">DangerButton</span><span class="p">,</span>
+      <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">children</span><span class="o">:</span> <span class="s1">&#39;Yep&#39;</span>
+      <span class="p">}</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="nx">Button</span><span class="p">,</span>
+      <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+        <span class="nx">children</span><span class="o">:</span> <span class="s1">&#39;Cancel&#39;</span>
+      <span class="p">}</span>
+   <span class="p">}]</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Or, if you prefer JSX:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">DeleteAccount</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Are</span> <span class="nx">you</span> <span class="nx">sure</span><span class="o">?&lt;</span><span class="err">/p&gt;</span>
+    <span class="o">&lt;</span><span class="nx">DangerButton</span><span class="o">&gt;</span><span class="nx">Yep</span><span class="o">&lt;</span><span class="err">/DangerButton&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Button</span> <span class="nx">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="o">&gt;</span><span class="nx">Cancel</span><span class="o">&lt;</span><span class="err">/Button&gt;</span>
+  <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>This mix and matching helps keep components decoupled from each other, as they can express both <em>is-a</em> and <em>has-a</em> relationships exclusively through composition:</p>
 
 <ul>
-<li><code>srcSet</code> for <code>&lt;img&gt;</code> to specify images at different pixel ratios</li>
-<li><code>textAnchor</code> for SVG</li>
-</ul></li>
-</ul>
-<h4><a class="anchor" name="bug-fixes"></a>Bug Fixes <a class="hash-link" href="#bug-fixes">#</a></h4>
-<ul>
-<li>Ensure all void elements don’t insert a closing tag into the markup.</li>
-<li>Ensure <code>className={false}</code> behaves consistently</li>
-<li>Ensure <code>this.refs</code> is defined, even if no refs are specified.</li>
-</ul>
-<h3><a class="anchor" name="addons"></a>Addons <a class="hash-link" href="#addons">#</a></h3>
-<ul>
-<li><code>update</code> function to deal with immutable data. <a href="/react/docs/update.html">Read the docs</a></li>
-</ul>
-<h3><a class="anchor" name="react-tools"></a>react-tools <a class="hash-link" href="#react-tools">#</a></h3>
-<ul>
-<li>Added an option argument to <code>transform</code> function. The only option supported is <code>harmony</code>, which behaves the same as <code>jsx --harmony</code> on the command line. This uses the ES6 transforms from <a href="https://github.com/facebook/jstransform">jstransform</a>.</li>
+<li><code>Button</code> is a DOM <code>&lt;button&gt;</code> with specific properties.</li>
+<li><code>DangerButton</code> is a <code>Button</code> with specific properties.</li>
+<li><code>DeleteAccount</code> contains a <code>Button</code> and a <code>DangerButton</code> inside a <code>&lt;div&gt;</code>.</li>
 </ul>
 
-        </div>
+<h3>Components Encapsulate Element Trees</h3>
+
+<p>When React sees an element with a function or class <code>type</code>, it knows to ask <em>that</em> component what element it renders to, given the corresponding <code>props</code>.</p>
+
+<p>When it sees this element:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="nx">Button</span><span class="p">,</span>
+  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+    <span class="nx">children</span><span class="o">:</span> <span class="s1">&#39;OK!&#39;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>React will ask <code>Button</code> what it renders to. The <code>Button</code> will return this element:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;button&#39;</span><span class="p">,</span>
+  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">className</span><span class="o">:</span> <span class="s1">&#39;button button-blue&#39;</span><span class="p">,</span>
+    <span class="nx">children</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
+      <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">children</span><span class="o">:</span> <span class="s1">&#39;OK!&#39;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>React will repeat this process until it knows the underlying DOM tag elements for every component on the page.</p>
+
+<p>React is like a child asking “what is Y” for every “X is Y” you explain to them until they figure out every little thing in the world.</p>
+
+<p>Remember the <code>Form</code> example above? It can be written in React as follows<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">Form</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">isSubmitted</span><span class="p">,</span> <span class="nx">buttonText</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">isSubmitted</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Form submitted! Return a message element.</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="nx">Message</span><span class="p">,</span>
+      <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Success!&#39;</span>
+      <span class="p">}</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Form is still visible! Return a button element.</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="nx">Button</span><span class="p">,</span>
+    <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">children</span><span class="o">:</span> <span class="nx">buttonText</span><span class="p">,</span>
+      <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;blue&#39;</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>That’s it! For a React component, props are the input, and an element tree is the output.</p>
+
+<p><strong>The returned element tree can contain both elements describing DOM nodes, and elements describing other components. This lets you compose independent parts of UI without relying on their internal DOM structure.</strong></p>
+
+<p>We let React create, update, and destroy instances. We <em>describe</em> them with elements we return from the components, and React takes care of managing the instances.</p>
+
+<h3>Components Can Be Classes or Functions</h3>
+
+<p>In the code above, <code>Form</code>, <code>Message</code>, and <code>Button</code> are React components. They can either be written as functions, like above, or as classes descending from <code>React.Component</code>. These three ways to declare a component are mostly equivalent:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// 1) As a function of props</span>
+<span class="kr">const</span> <span class="nx">Button</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">children</span><span class="p">,</span> <span class="nx">color</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">({</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;button&#39;</span><span class="p">,</span>
+  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">className</span><span class="o">:</span> <span class="s1">&#39;button button-&#39;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">,</span>
+    <span class="nx">children</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
+      <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">children</span><span class="o">:</span> <span class="nx">children</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// 2) Using the React.createClass() factory</span>
+<span class="kr">const</span> <span class="nx">Button</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="p">{</span> <span class="nx">children</span><span class="p">,</span> <span class="nx">color</span> <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;button&#39;</span><span class="p">,</span>
+      <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">className</span><span class="o">:</span> <span class="s1">&#39;button button-&#39;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">,</span>
+        <span class="nx">children</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
+          <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">children</span><span class="o">:</span> <span class="nx">children</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// 3) As an ES6 class descending from React.Component</span>
+<span class="kr">class</span> <span class="nx">Button</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="p">{</span> <span class="nx">children</span><span class="p">,</span> <span class="nx">color</span> <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;button&#39;</span><span class="p">,</span>
+      <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">className</span><span class="o">:</span> <span class="s1">&#39;button button-&#39;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">,</span>
+        <span class="nx">children</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
+          <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">children</span><span class="o">:</span> <span class="nx">children</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>When a component is defined as a class, it is a little bit more powerful than a functional component. It can store some local state and perform custom logic when the corresponding DOM node is created or destroyed.</p>
+
+<p>A functional component is less powerful but is simpler, and acts like a class component with just a single <code>render()</code> method. Unless you need features available only in a class, we encourage you to use functional components instead.</p>
+
+<p><strong>However, whether functions or classes, fundamentally they are all components to React. They take the props as their input, and return the elements as their output.</strong></p>
+
+<h3>Top-Down Reconciliation</h3>
+
+<p>When you call:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">({</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="nx">Form</span><span class="p">,</span>
+  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">isSubmitted</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">buttonText</span><span class="o">:</span> <span class="s1">&#39;OK!&#39;</span>
+  <span class="p">}</span>
+<span class="p">},</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">));</span>
+</code></pre></div>
+<p>React will ask the <code>Form</code> component what element tree it returns, given those <code>props</code>. It will gradually “refine” its understanding of your component tree in terms of simpler primitives:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// React: You told me this...</span>
+<span class="p">{</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="nx">Form</span><span class="p">,</span>
+  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">isSubmitted</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">buttonText</span><span class="o">:</span> <span class="s1">&#39;OK!&#39;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// React: ...And Form told me this...</span>
+<span class="p">{</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="nx">Button</span><span class="p">,</span>
+  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">children</span><span class="o">:</span> <span class="s1">&#39;OK!&#39;</span><span class="p">,</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;blue&#39;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// React: ...and Button told me this! I guess I&#39;m done.</span>
+<span class="p">{</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;button&#39;</span><span class="p">,</span>
+  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">className</span><span class="o">:</span> <span class="s1">&#39;button button-blue&#39;</span><span class="p">,</span>
+    <span class="nx">children</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
+      <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">children</span><span class="o">:</span> <span class="s1">&#39;OK!&#39;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This is a part of the process that React calls <a href="/react/docs/reconciliation.html">reconciliation</a> which starts when you call <a href="/react/docs/top-level-api.html#reactdom.render"><code>ReactDOM.render()</code></a> or <a href="/react/docs/component-api.html#setstate"><code>setState()</code></a>. By the end of the reconciliation, React knows the result DOM tree, and a renderer like <code>react-dom</code> or <code>react-native</code> applies the minimal set of changes necessary to update the DOM nodes (or the platform-specific views in case of React Native).</p>
+
+<p>This gradual refining process is also the reason React apps are easy to optimize. If some parts of your component tree become too large for React to visit efficiently, you can tell it to <a href="/react/docs/advanced-performance.html">skip this “refining” and diffing certain parts of the tree if the relevant props have not changed</a>. It is very fast to calculate whether the props have changed if they are immutable, so React and immutability work great together, and can provide great optimizations with the minimal effort.</p>
+
+<p>You might have noticed that this blog entry talks a lot about components and elements, and not so much about the instances. The truth is, instances have much less importance in React than in most object-oriented UI frameworks.</p>
+
+<p>Only components declared as classes have instances, and you never create them directly: React does that for you. While <a href="/react/docs/more-about-refs.html">mechanisms for a parent component instance to access a child component instance</a> exist, they are only used for imperative actions (such as setting focus on a field), and should generally be avoided.</p>
+
+<p>React takes care of creating an instance for every class component, so you can write components in an object-oriented way with methods and local state, but other than that, instances are not very important in the React’s programming model and are managed by React itself.</p>
+
+<h2>Summary</h2>
+
+<p>An <em>element</em> is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. Elements can contain other elements in their props. Creating a React element is cheap. Once an element is created, it is never mutated.</p>
+
+<p>A <em>component</em> can be declared in several different ways. It can be a class with a <code>render()</code> method. Alternatively, in simple cases, it can be defined as a function. In either case, it takes props as an input, and returns an element tree as the output.</p>
+
+<p>When a component receives some props as an input, it is because a particular parent component returned an element with its <code>type</code> and these props. This is why people say that the props flows one way in React: from parents to children.</p>
+
+<p>An <em>instance</em> is what you refer to as <code>this</code> in the component class you write. It is useful for <a href="/react/docs/component-api.html">storing local state and reacting to the lifecycle events</a>.</p>
+
+<p>Functional components don’t have instances at all. Class components have instances, but you never need to create a component instance directly—React takes care of this.</p>
+
+<p>Finally, to create elements, use <a href="/react/docs/top-level-api.html#react.createelement"><code>React.createElement()</code></a>, <a href="/react/docs/jsx-in-depth.html">JSX</a>, or an <a href="/react/docs/top-level-api.html#react.createfactory">element factory helper</a>. Don’t write elements as plain objects in the real code—just know that they are plain objects under the hood.</p>
+
+<h2>Further Reading</h2>
+
+<ul>
+<li><a href="/react/blog/2014/10/14/introducing-react-elements.html">Introducing React Elements</a></li>
+<li><a href="/react/blog/2015/02/24/streamlining-react-elements.html">Streamlining React Elements</a></li>
+<li><a href="/react/docs/glossary.html">React (Virtual) DOM Terminology</a></li>
+</ul>
+
+<div class="footnotes">
+<hr>
+<ol>
+
+<li id="fn1">
+<p>All React elements require an additional <code>$$typeof: Symbol.for(&#39;react.element&#39;)</code> field declared on the object for <a href="https://github.com/facebook/react/pull/4832">security reasons</a>. It is omitted in the examples above. This blog entry uses inline objects for elements to give you an idea of what’s happening underneath but the code won’t run as is unless you either add <code>$$typeof</code> to the elements, or change the code to use <code>React.createElement()</code> or JSX.&nbsp;<a href="#fnref1" rev="footnote">&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+
+</div>
+
+
+
+      </div>
+    
+      <div class="post-list-item">
+        
+
+<h1>
+
+  <a href="/react/blog/2015/12/16/ismounted-antipattern.html">isMounted is an Antipattern</a>
+
+</h1>
+
+<p class="meta">
+  December 16, 2015
+  by
+  
+    
+      <a href="http://www.jimsproch.com">Jim Sproch</a>
+    
+    
+  
+</p>
+
+<hr>
+
+<div class="post">
+  <p>As we move closer to officially deprecating isMounted, it&#39;s worth understanding why the function is an antipattern, and how to write code without the isMounted function.</p>
+
+<p>The primary use case for <code>isMounted()</code> is to avoid calling <code>setState()</code> after a component has unmounted, because calling <code>setState()</code> after a component has unmounted will emit a warning. The “setState warning” exists to help you catch bugs, because calling <code>setState()</code> on an unmounted component is an indication that your app/component has somehow failed to clean up properly. Specifically, calling <code>setState()</code> in an unmounted component means that your app is still holding a reference to the component after the component has been unmounted - which often indicates a memory leak!</p>
+
+<p>To avoid the error message, people often add lines like this:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">isMounted</span><span class="p">())</span> <span class="p">{</span> <span class="c1">// This is bad.</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({...});</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Checking <code>isMounted</code> before calling <code>setState()</code> does eliminate the warning, but it also defeats the purpose of the warning, since now you will never get the warning (even when you should!)</p>
+
+<p>Other uses of <code>isMounted()</code> are similarly erroneous; using <code>isMounted()</code> is a code smell because the only reason you would check is because you think you might be holding a reference after the component has unmounted.</p>
+
+<p>An easy migration strategy for anyone upgrading their code to avoid <code>isMounted()</code> is to track the mounted status yourself.  Just set a <code>_isMounted</code> property to true in <code>componentDidMount</code> and set it to false in <code>componentWillUnmount</code>, and use this variable to check your component&#39;s status.</p>
+
+<p>An optimal solution would be to find places where <code>setState()</code> might be called after a component has unmounted, and fix them. Such situations most commonly occur due to callbacks, when a component is waiting for some data and gets unmounted before the data arrives. Ideally, any callbacks should be canceled in <code>componentWillUnmount</code>, prior to unmounting.</p>
+
+<p>For instance, if you are using a Flux store in your component, you must unsubscribe in <code>componentWillUnmount</code>:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">MyComponent</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">mydatastore</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">...</span>
+  <span class="p">}</span>
+  <span class="nx">componentWillUnmount</span><span class="p">()</span> <span class="p">{</span>
+<span class="hll">    <span class="nx">mydatastore</span><span class="p">.</span><span class="nx">unsubscribe</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span>  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>If you use ES6 promises, you may need to wrap your promise in order to make it cancelable.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">cancelablePromise</span> <span class="o">=</span> <span class="nx">makeCancelable</span><span class="p">(</span>
+  <span class="k">new</span> <span class="nx">Promise</span><span class="p">(</span><span class="nx">r</span> <span class="o">=&gt;</span> <span class="nx">component</span><span class="p">.</span><span class="nx">setState</span><span class="p">({...}}))</span>
+<span class="p">);</span>
+
+<span class="nx">cancelablePromise</span>
+  <span class="p">.</span><span class="nx">promise</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;resolved&#39;</span><span class="p">))</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">reason</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;isCanceled&#39;</span><span class="p">,</span> <span class="nx">reason</span><span class="p">.</span><span class="nx">isCanceled</span><span class="p">));</span>
+
+<span class="nx">cancelablePromise</span><span class="p">.</span><span class="nx">cancel</span><span class="p">();</span> <span class="c1">// Cancel the promise</span>
+</code></pre></div>
+<p>Where <code>makeCancelable</code> was originally <a href="https://github.com/facebook/react/issues/5465#issuecomment-157888325">defined by @istarkov</a> as:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">makeCancelable</span> <span class="o">=</span> <span class="p">(</span><span class="nx">promise</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">hasCanceled_</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+  <span class="kr">const</span> <span class="nx">wrappedPromise</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span>
+      <span class="nx">val</span> <span class="o">=&gt;</span> <span class="nx">hasCanceled_</span> <span class="o">?</span> <span class="nx">reject</span><span class="p">({</span><span class="nx">isCanceled</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span> <span class="o">:</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">val</span><span class="p">),</span>
+      <span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">hasCanceled_</span> <span class="o">?</span> <span class="nx">reject</span><span class="p">({</span><span class="nx">isCanceled</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span> <span class="o">:</span> <span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span>
+    <span class="p">);</span>
+  <span class="p">});</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">promise</span><span class="o">:</span> <span class="nx">wrappedPromise</span><span class="p">,</span>
+    <span class="nx">cancel</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">hasCanceled_</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">},</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>As an added bonus for getting your code cleaned up early, getting rid of <code>isMounted()</code> makes it one step easier for you to upgrade to ES6 classes, where using <code>isMounted()</code> is already prohibited.  Happy coding!</p>
+
+</div>
+
+
+
+      </div>
+    
+      <div class="post-list-item">
+        
+
+<h1>
+
+  <a href="/react/blog/2015/12/04/react-js-conf-2016-diversity-scholarship.html">React.js Conf 2016 Diversity Scholarship</a>
+
+</h1>
+
+<p class="meta">
+  December  4, 2015
+  by
+  
+    
+      <a href="https://twitter.com/zpao">Paul O’Shannessy</a>
+    
+    
+  
+</p>
+
+<hr>
+
+<div class="post">
+  <p>I am thrilled to announced that we will be organizing another diversity scholarship program for the upcoming React.js Conf! The tech industry is suffering from a lack of diversity, but it&#39;s important to us that we have a thriving community that is made up of people with a variety of experiences and viewpoints.</p>
+
+<p>When we ran this program last year, we had <em>over 200</em> people apply for only 10 tickets. There were so many people that we wanted to bring in but we couldn&#39;t. The results were still awesome, and we had bright individuals from around the world attending who would have otherwise been unable to. These attendees took part in discussions at the conference and brought perspectives that we might not have otherwise seen there.</p>
+
+<p>This year we&#39;re excited to bring back the scholarship, but we&#39;ve set aside <strong>40 tickets</strong> because we really believe that it&#39;s important to do our best to make sure we have an even more diverse audience.</p>
+
+<p>This is something I&#39;m personally really excited to be a part of. I know the rest of the team is as well. We&#39;re really proud to have everyone at Facebook providing support and funding for this.</p>
+
+<p>The details of the scholarship are provided below (or you can <a href="http://goo.gl/forms/PEmKj8oUp4">go directly to the application</a>). I encourage you to apply! If you don&#39;t feel like you are eligible yourself, you can still help – send this along to friends, family, coworkers, acquaintances, or anybody who might be interested. And even if you haven&#39;t spoken before, please consider <a href="http://conf.reactjs.com/">submitting a proposal for a talk</a> (either 30 minutes or just 5 minutes) - we&#39;re hoping to have a very diverse group of speakers in addition to attendees.</p>
+
+<hr>
+
+<p>Facebook is excited to announce that we are now accepting applications for the React.js Conf Diversity Scholarship!</p>
+
+<p>Beginning today, those studying or working in computer science or a related field can apply for a partial scholarship to attend the React.js Conf in San Francisco, CA on February 22 &amp; 23, 2016.</p>
+
+<p>React opens a world of new possibilities such as server-side rendering, real-time updates, different rendering targets like SVG and canvas. React Native makes is easy to use the same concepts and technologies to build native mobile experiences on iOS and Android. Join us at React.js Conf to shape the future of client-side applications! For more information about the React.js conference, please see <a href="http://conf.reactjs.com/">the website</a>.</p>
+
+<p>At Facebook, we believe that anyone anywhere can make a positive impact by developing products to make the world more open and connected to the people and things they care about. Given the current realities of the tech industry and the lack of representation of communities we seek to serve, applicants currently under-represented in Computer Science and related fields are strongly encouraged to apply. Facebook will make determinations on scholarship recipients in its sole discretion. Facebook complies with all equal opportunity laws.</p>
+
+<p>To apply for the scholarship, please visit the application page: <strong><a href="http://goo.gl/forms/PEmKj8oUp4">http://goo.gl/forms/PEmKj8oUp4</a></strong></p>
+
+<h2>Award Includes</h2>
+
+<ul>
+<li>Paid registration fee for the React.js Conf Feburary 22 &amp; 23 in downtown San Francisco, CA</li>
+<li>Paid lodging expenses for February 21, 22, 23</li>
+</ul>
+
+<h2>Important Dates</h2>
+
+<ul>
+<li>Sunday December 13th 2015 - 11:59 PST: Applications for the React.js Conf Scholarship must be submitted in full</li>
+<li>Wednesday, December 16th, 2015: Award recipients will be notified by email of their acceptance</li>
+<li>Monday &amp; Tuesday, February 22 &amp; 23, 2016: React.js Conf</li>
+</ul>
+
+<h2>Eligibility</h2>
+
+<ul>
+<li>Must currently be studying or working in Computer Science or a related field</li>
+<li>International applicants are welcome, but you will be responsible for securing your own visa to attend the conference</li>
+<li>You must be able to provide your own transportation to San Francisco</li>
+<li>You must be available to attend the full duration of React.js Conf on February 22 &amp; 23 in San Francisco, CA</li>
+</ul>
+
+</div>
+
+
+
       </div>
     
 
@@ -297,19 +824,52 @@ Minified build for production: <a href="http://fb.me/react-with-addons-0.10.0.mi
 </section>
 
 
-    <footer class="wrap">
-      <div class="left">
-        A Facebook &amp; Instagram collaboration.<br>
-        <a href="/react/acknowledgements.html">Acknowledgements</a>
-      </div>
-      <div class="right">
-        &copy; 2013&ndash;2014 Facebook Inc.<br>
-        Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
-      </div>
-    </footer>
-  </div>
-  <div id="fb-root"></div>
+    <footer class="nav-footer">
+  <section class="sitemap">
+    <a href="/react/" class="nav-home">
+    </a>
+    <div>
+      <h5><a href="/react/docs/">Docs</a></h5>
+      <a href="/react/docs/hello-world.html">Quick Start</a>
+      <a href="/react/docs/thinking-in-react.html">Thinking in React</a>
+      <a href="/react/tutorial/tutorial.html">Tutorial</a>
+      <a href="/react/docs/jsx-in-depth.html">Advanced Guides</a>
+    </div>
+    <div>
+      <h5><a href="/react/community/support.html">Community</a></h5>
+      <a href="http://stackoverflow.com/questions/tagged/reactjs" target="_blank">Stack Overflow</a>
+      <a href="https://discuss.reactjs.org/" target="_blank">Discussion Forum</a>
+      <a href="https://discord.gg/0ZcbPKXt5bZjGY5n" target="_blank">Reactiflux Chat</a>
+      <a href="https://www.facebook.com/react" target="_blank">Facebook</a>
+      <a href="https://twitter.com/reactjs" target="_blank">Twitter</a>
+    </div>
+    <div>
+      <h5><a href="/react/community/support.html">Resources</a></h5>
+      <a href="/react/community/conferences.html">Conferences</a>
+      <a href="/react/community/videos.html">Videos</a>
+      <a href="https://github.com/facebook/react/wiki/Examples" target="_blank">Examples</a>
+      <a href="https://github.com/facebook/react/wiki/Complementary-Tools" target="_blank">Complementary Tools</a>
+    </div>
+    <div>
+      <h5>More</h5>
+      <a href="/react/blog/">Blog</a>
+      <a href="https://github.com/facebook/react" target="_blank">GitHub</a>
+      <a href="http://facebook.github.io/react-native/" target="_blank">React Native</a>
+      <a href="/react/acknowledgements.html">Acknowledgements</a>
+    </div>
+  </section>
+  <a href="https://code.facebook.com/projects/" target="_blank" class="fbOpenSource">
+    <img src="/react/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/>
+  </a>
+  <section class="copyright">
+    Copyright © 2017 Facebook Inc.
+  </section>
+</footer>
 
+  </div>
+
+  <div id="fb-root"></div>
+  <script src="/react/js/anchor-links.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -324,9 +884,15 @@ Minified build for production: <a href="http://fb.me/react-with-addons-0.10.0.mi
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=623268441017527";
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=623268441017527";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+
+    docsearch({
+      apiKey: '36221914cce388c46d0420343e0bb32e',
+      indexName: 'react',
+      inputSelector: '#algolia-doc-search'
+    });
   </script>
 </body>
 </html>

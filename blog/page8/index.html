@@ -1,61 +1,76 @@
+
+
 <!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Blog | React</title>
-  <meta name="viewport" content="width=device-width">
-  <meta property="og:title" content="Blog | React">
+  <title>Blog - React</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Blog - React">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://facebook.github.io/react/blog/page8/index.html">
-  <meta property="og:image" content="http://facebook.github.io/react/img/logo_og.png">
+  <meta property="og:url" content="https://facebook.github.io/react/blog/page8/">
+  <meta property="og:image" content="https://facebook.github.io/react/img/logo_og.png">
   <meta property="og:description" content="A JavaScript library for building user interfaces">
   <meta property="fb:app_id" content="623268441017527">
 
   <link rel="shortcut icon" href="/react/favicon.ico">
-  <link rel="alternate" type="application/rss+xml" title="React" href="http://facebook.github.io/react/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="React" href="https://facebook.github.io/react/feed.xml">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
   <link rel="stylesheet" href="/react/css/syntax.css">
   <link rel="stylesheet" href="/react/css/codemirror.css">
   <link rel="stylesheet" href="/react/css/react.css">
 
-  <script type="text/javascript" src="//use.typekit.net/vqa1hcx.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="//use.typekit.net/vqa1hcx.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
 
   <!--[if lte IE 8]>
-  <script type="text/javascript" src="/react/js/html5shiv.min.js"></script>
-  <script type="text/javascript" src="/react/js/es5-shim.min.js"></script>
-  <script type="text/javascript" src="/react/js/es5-sham.min.js"></script>
+  <script src="https://unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://unpkg.com/es5-shim@4.5.9/es5-shim.min.js"></script>
+  <script src="https://unpkg.com/es5-shim@4.5.9/es5-sham.min.js"></script>
   <![endif]-->
-  <script type="text/javascript" src="/react/js/codemirror.js"></script>
-  <script type="text/javascript" src="/react/js/javascript.js"></script>
-  <script type="text/javascript" src="/react/js/react.js"></script>
-  <script type="text/javascript" src="/react/js/JSXTransformer.js"></script>
-  <script type="text/javascript" src="/react/js/live_editor.js"></script>
-  <script type="text/javascript" src="/react/js/showdown.js"></script>
+  <script src="https://unpkg.com/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
+  <script src="https://unpkg.com/codemirror@5.15.2"></script>
+  <script src="https://unpkg.com/codemirror@5.15.2/mode/javascript/javascript.js"></script>
+  <script src="https://unpkg.com/codemirror@5.15.2/mode/xml/xml.js"></script>
+  <script src="https://unpkg.com/codemirror@5.15.2/mode/jsx/jsx.js"></script>
+  <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+  <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/create-react-class/create-react-class.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <script src="/react/js/live_editor.js"></script>
 </head>
 <body>
 
   <div class="container">
 
     <div class="nav-main">
-      <div class="wrap">
-        <a class="nav-home" href="/react/index.html">
-          <img class="nav-logo" src="/react/img/logo.svg" width="36" height="36">
-          React
-        </a>
-        <ul class="nav-site">
-          <li><a href="/react/docs/getting-started.html">docs</a></li>
-          <li><a href="/react/support.html">support</a></li>
-          <li><a href="/react/downloads.html">download</a></li>
-          <li><a href="/react/blog/" class="active">blog</a></li>
-          <li><a href="http://github.com/facebook/react">github</a>
-        </ul>
-      </div>
+  <div class="wrap">
+    <a class="nav-home" href="/react/">
+      <img class="nav-logo" src="/react/img/logo.svg" width="36" height="36">
+      React
+    </a>
+    <div class="nav-lists">
+      <ul class="nav-site nav-site-internal">
+        <li><a href="/react/docs/hello-world.html">Docs</a></li>
+        <li><a href="/react/tutorial/tutorial.html">Tutorial</a></li>
+        <li><a href="/react/community/support.html">Community</a></li>
+        <li><a href="/react/blog/" class="active">Blog</a></li>
+        <li class="nav-site-search">
+          <input id="algolia-doc-search" type="text" placeholder="Search docs..." />
+        </li>
+      </ul>
+      <ul class="nav-site nav-site-external">
+        <li><a href="https://github.com/facebook/react">GitHub</a></li>
+        <li><a href="https://github.com/facebook/react/releases">v16.0.0</a></li>
+      </ul>
     </div>
+  </div>
+</div>
 
-    
 
     <section class="content wrap blogContent">
   <div class="nav-docs nav-blog">
@@ -63,25 +78,25 @@
     <h3>Recent posts</h3>
     <ul>
       
-        <li><a href="/react/blog/2014/12/19/react-js-conf-diversity-scholarship.html">React.js Conf Diversity Scholarship</a></li>
+        <li><a href="/react/blog/2017/09/26/react-v16.0.html">React v16.0</a></li>
       
-        <li><a href="/react/blog/2014/12/18/react-v0.12.2.html">React v0.12.2</a></li>
+        <li><a href="/react/blog/2017/09/25/react-v15.6.2.html">React v15.6.2</a></li>
       
-        <li><a href="/react/blog/2014/11/25/community-roundup-24.html">Community Round-up #24</a></li>
+        <li><a href="/react/blog/2017/09/08/dom-attributes-in-react-16.html">DOM Attributes in React 16</a></li>
       
-        <li><a href="/react/blog/2014/11/24/react-js-conf-updates.html">React.js Conf Updates</a></li>
+        <li><a href="/react/blog/2017/07/26/error-handling-in-react-16.html">Error Handling in React 16</a></li>
       
-        <li><a href="/react/blog/2014/10/28/react-v0.12.html">React v0.12</a></li>
+        <li><a href="/react/blog/2017/06/13/react-v15.6.0.html">React v15.6.0</a></li>
       
-        <li><a href="/react/blog/2014/10/27/react-js-conf.html">React.js Conf</a></li>
+        <li><a href="/react/blog/2017/05/18/whats-new-in-create-react-app.html">What's New in Create React App</a></li>
       
-        <li><a href="/react/blog/2014/10/17/community-roundup-23.html">Community Round-up #23</a></li>
+        <li><a href="/react/blog/2017/04/07/react-v15.5.0.html">React v15.5.0</a></li>
       
-        <li><a href="/react/blog/2014/10/16/react-v0.12-rc1.html">React v0.12 RC</a></li>
+        <li><a href="/react/blog/2016/11/16/react-v15.4.0.html">React v15.4.0</a></li>
       
-        <li><a href="/react/blog/2014/10/14/introducing-react-elements.html">Introducing React Elements</a></li>
+        <li><a href="/react/blog/2016/09/28/our-first-50000-stars.html">Our First 50,000 Stars</a></li>
       
-        <li><a href="/react/blog/2014/09/24/testing-flux-applications.html">Testing Flux Applications</a></li>
+        <li><a href="/react/blog/2016/08/05/relay-state-of-the-state.html">Relay: State of the State</a></li>
       
       <li><a href="/react/blog/all.html">All posts ...</a></li>
     </ul>
@@ -91,350 +106,388 @@
   <div class="inner-content">
     
       <div class="post-list-item">
-        <h1><a href="/react/blog/2013/12/23/community-roundup-12.html">Community Round-up #12</a></h1>
-        <p class="meta">December 23, 2013 by Vjeux</p>
-        <hr />
-        <div class="post">
-         <p>React got featured on the front-page of Hacker News thanks to the Om library. If you try it out for the first time, take a look at the <a href="/react/docs/getting-started.html">docs</a> and do not hesitate to ask questions on the <a href="http://groups.google.com/group/reactjs">Google Group</a>, <a href="irc://chat.freenode.net/reactjs">IRC</a> or <a href="http://stackoverflow.com/questions/tagged/reactjs">Stack Overflow</a>. We are trying our best to help you out!</p>
-<h2><a class="anchor" name="the-future-of-javascript-mvc"></a>The Future of Javascript MVC <a class="hash-link" href="#the-future-of-javascript-mvc">#</a></h2>
-<p><a href="http://swannodette.github.io/">David Nolen</a> announced Om, a thin wrapper on-top of React in ClojureScript. It stands out by only using immutable data structures. This unlocks the ability to write a very efficient <a href="http://facebook.github.io/react/docs/component-specs.html#updating-shouldcomponentupdate">shouldComponentUpdate</a> and get huge performance improvements on some tasks.</p>
+        
 
-<blockquote>
-<p>We&#39;ve known this for some time over here in the ClojureScript corner of the world - all of our collections are immutable and modeled directly on the original Clojure versions written in Java. Modern JavaScript engines have now been tuned to the point that it&#39;s no longer uncommon to see collection performance within 2.5X of the Java Virtual Machine.</p>
+<h1>
 
-<p>Wait, wait, wait. What does the performance of persistent data structures have to do with the future of JavaScript MVCs?</p>
+  <a href="/react/blog/2015/08/11/relay-technical-preview.html">Relay Technical Preview</a>
 
-<p>A whole lot.
-<figure><a href="http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs/"><img src="/react/img/blog/om-backbone.png" alt=""></a></figure></p>
+</h1>
 
-<p><a href="http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs/">Read the full article...</a></p>
-</blockquote>
-<h2><a class="anchor" name="scroll-position-with-react"></a>Scroll Position with React <a class="hash-link" href="#scroll-position-with-react">#</a></h2>
-<p>Managing the scroll position when new content is inserted is usually very tricky to get right. <a href="http://blog.vjeux.com/">Vjeux</a> discovered that <a href="http://facebook.github.io/react/docs/component-specs.html#updating-componentwillupdate">componentWillUpdate</a> and <a href="http://facebook.github.io/react/docs/component-specs.html#updating-componentdidupdate">componentDidUpdate</a> were triggered exactly at the right time to manage the scroll position.</p>
+<p class="meta">
+  August 11, 2015
+  by
+  
+    
+      <a href="https://twitter.com/en_JS">Joseph Savona</a>
+    
+    
+  
+</p>
 
-<blockquote>
-<p>We can check the scroll position before the component has updated with componentWillUpdate and scroll if necessary at componentDidUpdate</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">componentWillUpdate: function() {
-  var node = this.getDOMNode();
-  this.shouldScrollBottom =
-    (node.scrollTop + node.offsetHeight) === node.scrollHeight;
-},
-componentDidUpdate: function() {
-  if (this.shouldScrollBottom) {
-    var node = this.getDOMNode();
-    node.scrollTop = node.scrollHeight
-  }
-},
-</code></pre></div>
-<p><a href="http://blog.vjeux.com/2013/javascript/scroll-position-with-react.html">Check out the blog article...</a></p>
-</blockquote>
-<h2><a class="anchor" name="lights-out"></a>Lights Out <a class="hash-link" href="#lights-out">#</a></h2>
-<p>React declarative approach is well suited to write games. <a href="https://github.com/chenglou">Cheng Lou</a> wrote the famous Lights Out game in React. It&#39;s a good example of use of <a href="http://facebook.github.io/react/docs/animation.html">TransitionGroup</a> to implement animations.
-<figure><a href="http://chenglou.github.io/react-lights-out/"><img src="/react/img/blog/lights-out.png" alt=""></a></figure></p>
+<hr>
 
-<p><a href="http://chenglou.github.io/react-lights-out/">Try it out!</a></p>
-<h2><a class="anchor" name="reactive-table-bookmarklet"></a>Reactive Table Bookmarklet <a class="hash-link" href="#reactive-table-bookmarklet">#</a></h2>
-<p><a href="http://www.phpied.com/">Stoyan Stefanov</a> wrote a bookmarklet to process tables on the internet. It adds a little &quot;pop&quot; button that expands to a full-screen view with sorting, editing and export to csv and json.
-<figure><a href="http://www.phpied.com/reactivetable-bookmarklet/"><img src="/react/img/blog/reactive-bookmarklet.png" alt=""></a></figure></p>
+<div class="post">
+  <h1>Relay</h1>
 
-<p><a href="http://www.phpied.com/reactivetable-bookmarklet/">Check out the blog post...</a></p>
-<h2><a class="anchor" name="montagejs-tutorial-in-react"></a>MontageJS Tutorial in React <a class="hash-link" href="#montagejs-tutorial-in-react">#</a></h2>
-<p><a href="https://twitter.com/ssorallen">Ross Allen</a> implemented <a href="http://montagejs.org/">MontageJS</a>&#39;s <a href="http://montagejs.org/docs/tutorial-reddit-client-with-montagejs.html">Reddit tutorial</a> in React. This is a good opportunity to compare the philosophies of the two libraries.</p>
+<p>Today we&#39;re excited to share an update on Relay - the technical preview is now open-source and <a href="http://github.com/facebook/relay">available on GitHub</a>.</p>
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/ssorallen/fEsYt/embedded/result,html,js" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<h2>Why Relay</h2>
 
-<p><a href="http://jsfiddle.net/ssorallen/fEsYt/">View the source on JSFiddle...</a></p>
-<h2><a class="anchor" name="writing-good-react-components"></a>Writing Good React Components <a class="hash-link" href="#writing-good-react-components">#</a></h2>
-<p><a href="http://blog.whn.se/">William Högman Rudenmalm</a> wrote an article on how to write good React components. This is full of good advice.</p>
+<p>While React simplified the process of developing complex user-interfaces, it left open the question of how to interact with data on the server. It turns out that this was a significant source of friction for our developers; fragile coupling between client and server caused data-related bugs and made iteration harder. Furthermore, developers were forced to constantly re-implement complex async logic instead of focusing on their apps. Relay addresses these concerns by borrowing important lessons from React: it provides <em>declarative, component-oriented data fetching for React applications</em>.</p>
 
-<blockquote>
-<p>The idea of dividing software into smaller parts or components is hardly new - It is the essance of good software. The same principles that apply to software in general apply to building React components. That doesn’t mean that writing good React components is just about applying general rules.</p>
+<p>Declarative data-fetching means that Relay applications specify <em>what</em> data they need, not <em>how</em> to fetch that data. Just as React uses a description of the desired UI to manage view updates, Relay uses a data description in the form of GraphQL queries. Given these descriptions, Relay coalesces queries into batches for efficiency, manages error-prone asynchronous logic, caches data for performance, and automatically updates views as data changes.</p>
 
-<p>The web offers a unique set of challenges, which React offers interesting solutions to. First and foremost among these solutions is the what is called the Mock DOM. Rather than having user code interface with the DOM in a direct fashion, as is the case with most DOM manipulation libraries.</p>
+<p>Relay is also component-oriented, extending the notion of a React component to include a description of what data is necessary to render it. This colocation allows developers to reason locally about their application and eliminates bugs such as under- or over-fetching data.</p>
 
-<p>You build a model of how you want the DOM end up like. React then inserts this model into the DOM. This is very useful for updates because React simply compares the model or mock DOM against the actual DOM, and then only updates based on the difference between the two states.</p>
+<p>Relay is in use at Facebook in production apps, and we&#39;re using it more and more because <em>Relay lets developers focus on their products and move fast</em>. It&#39;s working for us and we&#39;d like to share it with the community.</p>
 
-<p><a href="http://blog.whn.se/post/69621609605/writing-good-react-components">Read the full article ...</a></p>
-</blockquote>
-<h2><a class="anchor" name="hoodie-react-todomvc"></a>Hoodie React TodoMVC <a class="hash-link" href="#hoodie-react-todomvc">#</a></h2>
-<p><a href="http://svenlito.com/">Sven Lito</a> integrated the React TodoMVC example within an <a href="http://hood.ie/">Hoodie</a> web app environment. This should let you get started using Hoodie and React.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">hoodie new todomvc -t &quot;hoodiehq/hoodie-react-todomvc&quot;
-</code></pre></div>
-<p><a href="https://github.com/hoodiehq/hoodie-react-todomvc">Check out on GitHub...</a></p>
-<h2><a class="anchor" name="jsx-compiler"></a>JSX Compiler <a class="hash-link" href="#jsx-compiler">#</a></h2>
-<p>Ever wanted to have a quick way to see what a JSX tag would be converted to? <a href="http://www.yungsters.com/">Tim Yung</a> made a page for it.
-<figure><a href="http://facebook.github.io/react/jsx-compiler.html"><img src="/react/img/blog/jsx-compiler.png" alt=""></a></figure></p>
+<h2>What&#39;s Included</h2>
 
-<p><a href="http://facebook.github.io/react/jsx-compiler.html">Try it out!</a></p>
-<h2><a class="anchor" name="random-tweet"></a>Random Tweet <a class="hash-link" href="#random-tweet">#</a></h2>
-<p><center><blockquote class="twitter-tweet" lang="en"><p>.<a href="https://twitter.com/jordwalke">@jordwalke</a> lays down some truth <a href="http://t.co/AXAn0UlUe3">http://t.co/AXAn0UlUe3</a>, optimizing your JS application shouldn&#39;t force you to rewrite so much code <a href="https://twitter.com/search?q=%23reactjs&amp;src=hash">#reactjs</a></p>&mdash; David Nolen (@swannodette) <a href="https://twitter.com/swannodette/statuses/413780079249215488">December 19, 2013</a></blockquote></center></p>
+<p>We&#39;re open-sourcing a technical preview of Relay - the core framework that we use internally, with some modifications for use outside Facebook. As this is the first release, it&#39;s good to keep in mind that there may be some incomplete or missing features. We&#39;ll continue to develop Relay and are working closely with the GraphQL community to ensure that Relay tracks updates during GraphQL&#39;s RFC period. But we couldn&#39;t wait any longer to get this in your hands, and we&#39;re looking forward to your feedback and contributions.</p>
 
-        </div>
+<p>Relay is available on <a href="http://github.com/facebook/relay">GitHub</a> and <a href="https://www.npmjs.com/package/react-relay">npm</a>.</p>
+
+<h2>What&#39;s Next</h2>
+
+<p>The team is super excited to be releasing Relay - and just as excited about what&#39;s next. Here are some of the things we&#39;ll be focusing on:</p>
+
+<ul>
+<li>Offline support. This will allow applications to fulfill queries and enqueue updates without connectivity.</li>
+<li>Real-time updates. In collaboration with the GraphQL community, we&#39;re working to define a specification for subscriptions and provide support for them in Relay.</li>
+<li>A generic Relay. Just as the power of React was never about the virtual DOM, Relay is much more than a GraphQL client. We&#39;re working to extend Relay to provide a unified interface for interacting not only with server data, but also in-memory and native device data (and, even better, a mix of all three).</li>
+<li>Finally, it&#39;s all too easy as developers to focus on those people with the newest devices and fastest internet connections. We&#39;re working to make it easier to build applications that are robust in the face of slow or intermittent connectivity.</li>
+</ul>
+
+<p>Thanks!</p>
+
+</div>
+
+
+
       </div>
     
       <div class="post-list-item">
-        <h1><a href="/react/blog/2013/12/19/react-v0.8.0.html">React v0.8</a></h1>
-        <p class="meta">December 19, 2013 by Paul O'Shannessy</p>
-        <hr />
-        <div class="post">
-         <p>I&#39;ll start by answering the obvious question:</p>
+        
 
-<blockquote>
-<p>What happened to 0.6 and 0.7?</p>
-</blockquote>
+<h1>
 
-<p>It&#39;s become increasingly obvious since our launch in May that people want to use React on the server. With the server-side rendering abilities, that&#39;s a perfect fit. However using the same copy of React on the server and then packaging it up for the client is surprisingly a harder problem. People have been using our <code>react-tools</code> module which includes React, but when browserifying that ends up packaging all of <code>esprima</code> and some other dependencies that aren&#39;t needed on the client. So we wanted to make this whole experience better.</p>
+  <a href="/react/blog/2015/08/03/new-react-devtools-beta.html">New React Devtools Beta</a>
 
-<p>We talked with <a href="https://github.com/jeffbski">Jeff Barczewski</a> who was the owner of the <code>react</code> module on npm. He was kind enough to transition ownership to us and release his package under a different name: <code>autoflow</code>. I encourage you to <a href="https://github.com/jeffbski/autoflow">check it out</a> if you&#39;re writing a lot of asynchronous code. In order to not break all of <code>react</code>&#39;s current users of 0.7.x, we decided to bump our version to 0.8 and skip the issue entirely. We&#39;re also including a warning if you use our <code>react</code> module like you would use the previous package.</p>
+</h1>
 
-<p>In order to make the transition to 0.8 for our current users as painless as possible, we decided to make 0.8 primarily a bug fix release on top of 0.5. No public APIs were changed (even if they were already marked as deprecated). We haven&#39;t added any of the new features we have in master, though we did take the opportunity to pull in some improvements to internals.</p>
+<p class="meta">
+  August  3, 2015
+  by
+  
+    
+      <a href="https://twitter.com/jaredforsyth">Jared Forsyth</a>
+    
+    
+  
+</p>
 
-<p>We hope that by releasing <code>react</code> on npm, we will enable a new set of uses that have been otherwise difficult. All feedback is welcome!</p>
-<h2><a class="anchor" name="changelog"></a>Changelog <a class="hash-link" href="#changelog">#</a></h2><h3><a class="anchor" name="react"></a>React <a class="hash-link" href="#react">#</a></h3>
+<hr>
+
+<div class="post">
+  <p>We&#39;ve made an entirely new version of the devtools, and we want you to try it
+out!</p>
+
+<p><img src="/react/img/blog/devtools-full.gif" alt="The full devtools gif"></p>
+
+<h2>Why entirely new?</h2>
+
+<p>Perhaps the biggest reason was to create a defined API for dealing with
+internals, so that other tools could benefit as well and not have to depend on
+implementation details. This gives us more freedom to refactor things
+internally without worrying about breaking tooling.</p>
+
+<p>The current version of the devtools is a fork of Blink&#39;s &quot;Elements&quot; pane, and
+is imperative, mutation-driven, and tightly integrated with Chrome-specific
+APIs. The new devtools are much less coupled to Chrome, and easier to reason
+about thanks to React.</p>
+
+<h2>What are the benefits?</h2>
+
 <ul>
-<li>Added support for more attributes:
+<li>100% React</li>
+<li>Firefox compatible</li>
+<li>React Native compatible</li>
+<li>more extensible &amp; hackable</li>
+</ul>
+
+<h2>Are there any new features?</h2>
+
+<p>Yeah!</p>
+
+<h3>The Tree View</h3>
+
+<p><img src="/react/img/blog/devtools-tree-view.png" alt="The new tree view of the devtools"></p>
 
 <ul>
-<li><code>rows</code> &amp; <code>cols</code> for <code>&lt;textarea&gt;</code></li>
-<li><code>defer</code> &amp; <code>async</code> for <code>&lt;script&gt;</code></li>
-<li><code>loop</code> for <code>&lt;audio&gt;</code> &amp; <code>&lt;video&gt;</code></li>
-<li><code>autoCorrect</code> for form fields (a non-standard attribute only supported by mobile WebKit)</li>
+<li>Much richer view of your props, including the contents of objects and arrays</li>
+<li>Custom components are emphasized, native components are de-emphasized</li>
+<li>Stateful components have a red collapser</li>
+<li>Improved keyboard navigation (hjkl or arrow keys)</li>
+<li>Selected component is available in the console as <code>$r</code></li>
+<li>Props that change highlight in green</li>
+<li><p>Right-click menu</p>
+
+<ul>
+<li>Scroll node into view</li>
+<li>Show the source for a component in the &quot;Sources&quot; pane</li>
+<li>Show the element in the &quot;Elements&quot; pane</li>
 </ul></li>
-<li>Improved error messages</li>
-<li>Fixed Selection events in IE11</li>
-<li>Added <code>onContextMenu</code> events</li>
-</ul>
-<h3><a class="anchor" name="react-with-addons"></a>React with Addons <a class="hash-link" href="#react-with-addons">#</a></h3>
-<ul>
-<li>Fixed bugs with TransitionGroup when children were undefined</li>
-<li>Added support for <code>onTransition</code></li>
-</ul>
-<h3><a class="anchor" name="react-tools"></a>react-tools <a class="hash-link" href="#react-tools">#</a></h3>
-<ul>
-<li>Upgraded <code>jstransform</code> and <code>esprima-fb</code></li>
-</ul>
-<h3><a class="anchor" name="jsxtransformer"></a>JSXTransformer <a class="hash-link" href="#jsxtransformer">#</a></h3>
-<ul>
-<li>Added support for use in IE8</li>
-<li>Upgraded browserify, which reduced file size by ~65KB (16KB gzipped)</li>
 </ul>
 
-        </div>
+<h3>Searching</h3>
+
+<p>Select the search bar (or press &quot;/&quot;), and start searching for a component by
+name.</p>
+
+<p><img src="/react/img/blog/devtools-search.gif" alt=""></p>
+
+<h3>The Side Pane</h3>
+
+<ul>
+<li>Now shows the <code>context</code> for a component</li>
+<li>Right-click to store a prop/state value as a global variable</li>
+</ul>
+
+<p><img src="/react/img/blog/devtools-side-pane.gif" alt=""></p>
+
+<h2>How do I install it?</h2>
+
+<p>First, disable the Chrome web store version, or it will break things. Then
+<a href="https://github.com/facebook/react-devtools/releases">download the .crx</a> and
+drag it into your <code>chrome://extensions</code> page. If it&#39;s not working to drag it
+from the downloads bar, try opening your downloads folder and drag it from
+there.</p>
+
+<p>Once we&#39;ve determined that there aren&#39;t any major regressions, we&#39;ll update
+the official web store version, and everyone will be automatically upgraded.</p>
+
+<h3>Also Firefox!</h3>
+
+<p>We also have an initial version of the devtools for Firefox, which you can
+download from the same <a href="https://github.com/facebook/react-devtools/releases">release page</a>.</p>
+
+<h2>Feedback welcome</h2>
+
+<p>Let us know what issues you run into
+<a href="https://github.com/facebook/react-devtools/issues">on GitHub</a>, and check out
+<a href="https://github.com/facebook/react-devtools/tree/devtools-next">the README</a>
+for more info.</p>
+
+<h2>Update</h2>
+
+<p><em>August 12, 2015</em></p>
+
+<p>A second beta is out, with a number of bugfixes. It is also listed on the
+<a href="https://github.com/facebook/react-devtools/releases">releases page</a>.</p>
+
+</div>
+
+
+
       </div>
     
       <div class="post-list-item">
-        <h1><a href="/react/blog/2013/12/18/react-v0.5.2-v0.4.2.html">React v0.5.2, v0.4.2</a></h1>
-        <p class="meta">December 18, 2013 by Paul O'Shannessy</p>
-        <hr />
-        <div class="post">
-         <p>Today we&#39;re releasing an update to address a potential XSS vulnerability that can    arise when using user data as a <code>key</code>. Typically &quot;safe&quot; data is used for a <code>key</code>, for example, an id from your database, or a unique hash. However there are cases where it may be reasonable to use user generated content. A carefully crafted piece of content could result in arbitrary JS execution. While we make a very concerted effort to ensure all text is escaped before inserting it into the DOM, we missed one case. Immediately following the discovery of this vulnerability, we performed an audit to ensure we this was the only such vulnerability.</p>
+        
 
-<p>This only affects v0.5.x and v0.4.x. Versions in the 0.3.x family are unaffected.</p>
+<h1>
 
-<p>Updated versions are available for immediate download via npm, bower, and on our <a href="http://facebook.github.io/react/downloads.html">download page</a>.</p>
+  <a href="/react/blog/2015/07/03/react-v0.14-beta-1.html">React v0.14 Beta 1</a>
 
-<p>We take security very seriously at Facebook. For most of our products, users don&#39;t need to know that a security issue has been fixed. But with libraries like React, we need to make sure developers using React have access to fixes to keep their users safe.</p>
+</h1>
 
-<p>While we&#39;ve encouraged responsible disclosure as part of <a href="https://www.facebook.com/whitehat/">Facebook&#39;s whitehat bounty program</a> since we launched, we don&#39;t have a good process for notifying our users. Hopefully we don&#39;t need to use it, but moving forward we&#39;ll set up a little bit more process to ensure the safety of our users. Ember.js has <a href="http://emberjs.com/security/">an excellent policy</a> which we may use as our model.</p>
-
-<p>You can learn more about the vulnerability discussed here: <a href="https://groups.google.com/forum/#!topic/reactjs/OIqxlB2aGfU">CVE-2013-7035</a>.</p>
-
-        </div>
-      </div>
+<p class="meta">
+  July  3, 2015
+  by
+  
     
-      <div class="post-list-item">
-        <h1><a href="/react/blog/2013/11/18/community-roundup-11.html">Community Round-up #11</a></h1>
-        <p class="meta">November 18, 2013 by Vjeux</p>
-        <hr />
-        <div class="post">
-         <p>This round-up is the proof that React has taken off from its Facebook&#39;s root: it features three in-depth presentations of React done by external people. This is awesome, keep them coming!</p>
-<h2><a class="anchor" name="super-vanjs-2013-talk"></a>Super VanJS 2013 Talk <a class="hash-link" href="#super-vanjs-2013-talk">#</a></h2>
-<p><a href="https://github.com/steveluscher">Steve Luscher</a> working at <a href="https://leanpub.com/">LeanPub</a> made a 30 min talk at <a href="https://twitter.com/vanjs">Super VanJS</a>. He does a remarkable job at explaining why React is so fast with very exciting demos using the HTML5 Audio API.</p>
-
-<figure><iframe width="600" height="338" src="//www.youtube.com/embed/1OeXsL5mr4g" frameborder="0" allowfullscreen></iframe></figure>
-<h2><a class="anchor" name="react-tips"></a>React Tips <a class="hash-link" href="#react-tips">#</a></h2>
-<p><a href="http://connormcsheffrey.com/">Connor McSheffrey</a> and <a href="https://github.com/chenglou">Cheng Lou</a> added a new section to the documentation. It&#39;s a list of small tips that you will probably find useful while working on React. Since each article is very small and focused, we <a href="http://facebook.github.io/react/tips/introduction.html">encourage you to contribute</a>!</p>
-
-<ul>
-<li><a href="http://facebook.github.io/react/tips/inline-styles.html">Inline Styles</a></li>
-<li><a href="http://facebook.github.io/react/tips/if-else-in-JSX.html">If-Else in JSX</a></li>
-<li><a href="http://facebook.github.io/react/tips/self-closing-tag.html">Self-Closing Tag</a></li>
-<li><a href="http://facebook.github.io/react/tips/maximum-number-of-jsx-root-nodes.html">Maximum Number of JSX Root Nodes</a></li>
-<li><a href="http://facebook.github.io/react/tips/style-props-value-px.html">Shorthand for Specifying Pixel Values in style props</a></li>
-<li><a href="http://facebook.github.io/react/tips/children-props-type.html">Type of the Children props</a></li>
-<li><a href="http://facebook.github.io/react/tips/controlled-input-null-value.html">Value of null for Controlled Input</a></li>
-<li><a href="http://facebook.github.io/react/tips/componentWillReceiveProps-not-triggered-after-mounting.html"><code>componentWillReceiveProps</code> Not Triggered After Mounting</a></li>
-<li><a href="http://facebook.github.io/react/tips/props-in-getInitialState-as-anti-pattern.html">Props in getInitialState Is an Anti-Pattern</a></li>
-<li><a href="http://facebook.github.io/react/tips/dom-event-listeners.html">DOM Event Listeners in a Component</a></li>
-<li><a href="http://facebook.github.io/react/tips/initial-ajax.html">Load Initial Data via AJAX</a></li>
-<li><a href="http://facebook.github.io/react/tips/false-in-jsx.html">False in JSX</a></li>
-</ul>
-<h2><a class="anchor" name="intro-to-the-react-framework"></a>Intro to the React Framework <a class="hash-link" href="#intro-to-the-react-framework">#</a></h2>
-<p><a href="http://blog.pixelingene.com/">Pavan Podila</a> wrote an in-depth introduction to React on TutsPlus. This is definitively worth reading.</p>
-
-<blockquote>
-<p>Within a component-tree, data should always flow down. A parent-component should set the props of a child-component to pass any data from the parent to the child. This is termed as the Owner-Owned pair. On the other hand user-events (mouse, keyboard, touches) will always bubble up from the child all the way to the root component, unless handled in between.
-<figure><a href="http://dev.tutsplus.com/tutorials/intro-to-the-react-framework--net-35660"><img src="/react/img/blog/tutsplus.png" alt=""></a></figure></p>
-
-<p><a href="http://dev.tutsplus.com/tutorials/intro-to-the-react-framework--net-35660">Read the full article ...</a></p>
-</blockquote>
-<h2><a class="anchor" name="140-characters-textarea"></a>140-characters textarea <a class="hash-link" href="#140-characters-textarea">#</a></h2>
-<p><a href="https://github.com/brainkim">Brian Kim</a> wrote a small textarea component that gradually turns red as you reach the 140-characters limit. Because he only changes the background color, React is smart enough not to mess with the text selection.</p>
-
-<p data-height="178" data-theme-id="0" data-slug-hash="FECGb" data-user="brainkim" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/brainkim/pen/FECGb'>FECGb</a> by Brian Kim (<a href='http://codepen.io/brainkim'>@brainkim</a>) on <a href='http://codepen.io'>CodePen</a></p>
-
-<script async src="//codepen.io/assets/embed/ei.js"></script>
-<h2><a class="anchor" name="genesis-skeleton"></a>Genesis Skeleton <a class="hash-link" href="#genesis-skeleton">#</a></h2>
-<p><a href="http://ericclemmons.github.io/">Eric Clemmons</a> is working on a &quot;Modern, opinionated, full-stack starter kit for rapid, streamlined application development&quot;. The version 0.4.0 has just been released and has first-class support for React.
-<figure><a href="http://genesis-skeleton.com/"><img src="/react/img/blog/genesis_skeleton.png" alt=""></a></figure></p>
-<h2><a class="anchor" name="agflow-talk"></a>AgFlow Talk <a class="hash-link" href="#agflow-talk">#</a></h2>
-<p><a href="http://rz.scale-it.pl/">Robert Zaremba</a> working on <a href="http://www.agflow.com/">AgFlow</a> recently talked in Poland about React.</p>
-
-<blockquote>
-<p>In a nutshell, I presented why we chose React among other available options (ember.js, angular, backbone ...) in AgFlow, where I’m leading an application development.</p>
-
-<p>During the talk a wanted to highlight that React is not about implementing a Model, but a way to construct visible components with some state. React is simple. It is super simple, you can learn it in 1h. On the other hand what is model? Which functionality it should provide? React does one thing and does it the best (for me)!</p>
-
-<p><a href="http://rz.scale-it.pl/2013/10/20/frontend_components_in_react.html">Read the full article...</a></p>
-</blockquote>
-
-<figure><iframe src="https://docs.google.com/presentation/d/1JSFbjCuuexwOHCeHWBMNRIJdyfD2Z0ZQwX65WOWkfaI/embed?start=false" frameborder="0" width="600" height="468" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"> </iframe></figure>
-<h2><a class="anchor" name="jsx"></a>JSX <a class="hash-link" href="#jsx">#</a></h2>
-<p><a href="http://tck.io/">Todd Kennedy</a> working at Cond&eacute; Nast wrote <a href="https://github.com/CondeNast/JSXHint">JSXHint</a> and explains in a blog post his perspective on JSX.</p>
-
-<blockquote>
-<p>Lets start with the elephant in the room: JSX?
-Is this some sort of template language? Specifically no. This might have been the first big stumbling block. What looks like to be a templating language is actually an in-line DSL that gets transpiled directly into JavaScript by the JSX transpiler.</p>
-
-<p>Creating elements in memory is quick -- copying those elements into the DOM is where the slowness occurs. This is due to a variety of issues, most namely reflow/paint. Changing the items in the DOM causes the browser to re-paint the display, apply styles, etc. We want to keep those operations to an absolute minimum, especially if we&#39;re dealing with something that needs to update the DOM frequently.</p>
-
-<p><a href="http://tck.io/posts/jsxhint_and_react.html">Read the full article...</a></p>
-</blockquote>
-<h2><a class="anchor" name="photo-gallery"></a>Photo Gallery <a class="hash-link" href="#photo-gallery">#</a></h2>
-<p><a href="http://miekd.com/">Maykel Loomans</a>, designer at Instagram, wrote a gallery for photos he shot using React.
-<figure><a href="http://photos.miekd.com/xoxo2013/"><img src="/react/img/blog/xoxo2013.png" alt=""></a></figure></p>
-<h2><a class="anchor" name="random-tweet"></a>Random Tweet <a class="hash-link" href="#random-tweet">#</a></h2>
-<p><img src="/react/img/blog/steve_reverse.gif" style="float: right;" />
-<div style="width: 320px;"><blockquote class="twitter-tweet"><p>I think this reversed gif of Steve Urkel best describes my changing emotions towards the React Lib <a href="http://t.co/JoX0XqSXX3">http://t.co/JoX0XqSXX3</a></p>&mdash; Ryan Seddon (@ryanseddon) <a href="https://twitter.com/ryanseddon/statuses/398572848802852864">November 7, 2013</a></blockquote></div></p>
-
-        </div>
-      </div>
+      <a href="https://sophiealpert.com">Sophie Alpert</a>
     
-      <div class="post-list-item">
-        <h1><a href="/react/blog/2013/11/06/community-roundup-10.html">Community Round-up #10</a></h1>
-        <p class="meta">November  6, 2013 by Vjeux</p>
-        <hr />
-        <div class="post">
-         <p>This is the 10th round-up already and React has come quite far since it was open sourced. Almost all new web projects at Khan Academy, Facebook, and Instagram are being developed using React. React has been deployed in a variety of contexts: a Chrome extension, a Windows 8 application, mobile websites, and desktop websites supporting Internet Explorer 8! Language-wise, React is not only being used within JavaScript but also CoffeeScript and ClojureScript.</p>
+    
+  
+</p>
 
-<p>The best part is that no drastic changes have been required to support all those use cases. Most of the efforts were targeted at polishing edge cases, performance improvements, and documentation.</p>
-<h2><a class="anchor" name="khan-academy---officially-moving-to-react"></a>Khan Academy - Officially moving to React <a class="hash-link" href="#khan-academy---officially-moving-to-react">#</a></h2>
-<p><a href="http://joelburget.com/">Joel Burget</a> announced at Hack Reactor that new front-end code at Khan Academy should be written in React!</p>
+<hr>
 
-<blockquote>
-<p>How did we get the rest of the team to adopt React? Using interns as an attack vector! Most full-time devs had already been working on their existing projects for a while and weren&#39;t looking to try something new at the time, but our class of summer interns was just arriving. For whatever reason, a lot of them decided to try React for their projects. Then mentors became exposed through code reviews or otherwise touching the new code. In this way React knowledge diffused to almost the whole team over the summer.</p>
+<div class="post">
+  <p>This week, many people in the React community are at <a href="https://www.react-europe.org/">ReactEurope</a> in the beautiful (and very warm) city of Paris, the second React conference that&#39;s been held to date. At our last conference, we released the first beta of React 0.13, and we figured we&#39;d do the same today with our first beta of React 0.14, giving you something to play with if you&#39;re not at the conference or you&#39;re looking for something to do on the way home.</p>
 
-<p>Since the first React checkin on June 5, we&#39;ve somehow managed to accumulate 23500 lines of jsx (React-flavored js) code. Which is terrifying in a way - that&#39;s a lot of code - but also really exciting that it was picked up so quickly.</p>
+<p>With React 0.14, we&#39;re continuing to let React mature and to make minor changes as the APIs continue to settle down. I&#39;ll talk only about the two largest changes in this blog post; when we publish the final release we&#39;ll be sure to update all of our documentation and include a full changelog.</p>
 
-<p>We held three meetings about how we should proceed with React. At the first two we decided to continue experimenting with React and deferred a final decision on whether to adopt it. At the third we adopted the policy that new code should be written in React.</p>
+<p>You can install the new beta with <code>npm install react@0.14.0-beta1</code> and <code>npm install react-dom@0.14.0-beta1</code>. As mentioned in <a href="https://facebook.github.io/react/blog/2015/06/12/deprecating-jstransform-and-react-tools.html">Deprecating react-tools</a>, we&#39;re no longer updating the react-tools package so this release doesn&#39;t include a new version of it. Please try the new version out and let us know what you think, and please do file issues on our GitHub repo if you run into any problems.</p>
 
-<p>I&#39;m excited that we were able to start nudging code quality forward. However, we still have a lot of work to do! One of the selling points of this transition is adopting a uniform frontend style. We&#39;re trying to upgrade all the code from (really old) pure jQuery and (regular old) Backbone views / Handlebars to shiny React. At the moment all we&#39;ve done is introduce more fragmentation. We won&#39;t be gratuitously updating working code (if it ain&#39;t broke, don&#39;t fix it), but are seeking out parts of the codebase where we can shoot two birds with one stone by rewriting in React while fixing bugs or adding functionality.</p>
+<h2>Two Packages</h2>
 
-<p><a href="http://joelburget.com/backbone-to-react/">Read the full article</a></p>
-</blockquote>
-<h2><a class="anchor" name="react-rethinking-best-practices"></a>React: Rethinking best practices <a class="hash-link" href="#react-rethinking-best-practices">#</a></h2>
-<p><a href="http://www.petehunt.net/">Pete Hunt</a>&#39;s talk at JSConf EU 2013 is now available in video.</p>
+<p>As we look at packages like <a href="https://github.com/facebook/react-native">react-native</a>, <a href="https://github.com/reactjs/react-art">react-art</a>, <a href="https://github.com/Flipboard/react-canvas">react-canvas</a>, and <a href="https://github.com/Izzimach/react-three">react-three</a>, it&#39;s become clear that the beauty and essence of React has nothing to do with browsers or the DOM.</p>
 
-<figure><iframe width="600" height="370" src="//www.youtube.com/embed/x7cQ3mrcKaY" frameborder="0" allowfullscreen></iframe></figure>
-<h2><a class="anchor" name="server-side-react-with-php"></a>Server-side React with PHP <a class="hash-link" href="#server-side-react-with-php">#</a></h2>
-<p><a href="http://www.phpied.com/">Stoyan Stefanov</a>&#39;s series of articles on React has two new entries on how to execute React on the server to generate the initial page load.</p>
+<p>We think the true foundations of React are simply ideas of components and elements: being able to describe what you want to render in a declarative way. These are the pieces shared by all of these different packages. The parts of React specific to certain rendering targets aren&#39;t usually what we think of when we think of React. As one example, DOM diffing currently enables us to build React for the browser and make it fast enough to be useful, but if the DOM didn&#39;t have a stateful, imperative API, we might not need diffing at all.</p>
 
-<blockquote>
-<p>This post is an initial hack to have React components render server-side in PHP.</p>
+<p>To make this more clear and to make it easier to build more environments that React can render to, we&#39;re splitting the main <code>react</code> package into two: <code>react</code> and <code>react-dom</code>.</p>
 
-<ul>
-<li>Problem: Build web UIs</li>
-<li>Solution: React</li>
-<li>Problem: UI built in JS is anti-SEO (assuming search engines are still noscript) and bad for perceived performance (blank page till JS arrives)</li>
-<li>Solution: <a href="https://github.com/facebook/react-page">React page</a> to render the first view</li>
-<li>Problem: Can&#39;t host node.js apps / I have tons of PHP code</li>
-<li>Solution: Use PHP then!</li>
-</ul>
+<p>The <code>react</code> package contains <code>React.createElement</code>, <code>React.createClass</code> and <code>React.Component</code>, <code>React.PropTypes</code>, <code>React.Children</code>, and the other helpers related to elements and component classes. We think of these as the <a href="http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/"><em>isomorphic</em></a> or <a href="https://medium.com/@mjackson/universal-javascript-4761051b7ae9"><em>universal</em></a> helpers that you need to build components.</p>
 
-<p><a href="http://www.phpied.com/server-side-react-with-php/"><strong>Read part 1 ...</strong></a></p>
+<p>The <code>react-dom</code> package contains <code>ReactDOM.render</code>, <code>ReactDOM.unmountComponentAtNode</code>, and <code>ReactDOM.findDOMNode</code>, and in <code>react-dom/server</code> we have server-side rendering support with <code>ReactDOMServer.renderToString</code> and <code>ReactDOMServer.renderToStaticMarkup</code>.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">React</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;react&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">ReactDOM</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;react-dom&#39;</span><span class="p">);</span>
 
-<p><a href="http://www.phpied.com/server-side-react-with-php-part-2/"><strong>Read part 2 ...</strong></a></p>
+<span class="kd">var</span> <span class="nx">MyComponent</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">World</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
+  <span class="p">}</span>
+<span class="p">});</span>
 
-<p>Rendered markup on the server:
-<figure><a href="http://www.phpied.com/server-side-react-with-php-part-2/"><img src="/react/img/blog/react-php.png" alt=""></a></figure></p>
-</blockquote>
-<h2><a class="anchor" name="todomvc-benchmarks"></a>TodoMVC Benchmarks <a class="hash-link" href="#todomvc-benchmarks">#</a></h2>
-<p>Webkit has a <a href="https://github.com/WebKit/webkit/tree/master/PerformanceTests/DoYouEvenBench">TodoMVC Benchmark</a> that compares different frameworks. They recently included React and here are the results (average of 10 runs in Chrome 30):</p>
-
-<ul>
-<li><strong>AngularJS:</strong> 4043ms</li>
-<li><strong>AngularJSPerf:</strong> 3227ms</li>
-<li><strong>BackboneJS:</strong> 1874ms</li>
-<li><strong>EmberJS:</strong> 6822ms</li>
-<li><strong>jQuery:</strong> 14628ms</li>
-<li><strong>React:</strong> 2864ms</li>
-<li><strong>VanillaJS:</strong> 5567ms</li>
-</ul>
-
-<p><a href="http://www.petehunt.net/react/tastejs/benchmark.html">Try it yourself!</a></p>
-
-<p>Please don&#39;t take those numbers too seriously, they only reflect one very specific use case and are testing code that wasn&#39;t written with performance in mind.</p>
-
-<p>Even though React scores as one of the fastest frameworks in the benchmark, the React code is simple and idiomatic. The only performance tweak used is the following function:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="cm">/**</span>
-<span class="cm"> * This is a completely optional performance enhancement that you can implement</span>
-<span class="cm"> * on any React component. If you were to delete this method the app would still</span>
-<span class="cm"> * work correctly (and still be very performant!), we just use it as an example</span>
-<span class="cm"> * of how little code it takes to get an order of magnitude performance improvement.</span>
-<span class="cm"> */</span>
-<span class="nx">shouldComponentUpdate</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">nextProps</span><span class="p">,</span> <span class="nx">nextState</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="nx">nextProps</span><span class="p">.</span><span class="nx">todo</span><span class="p">.</span><span class="nx">id</span> <span class="o">!==</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">todo</span><span class="p">.</span><span class="nx">id</span> <span class="o">||</span>
-    <span class="nx">nextProps</span><span class="p">.</span><span class="nx">todo</span> <span class="o">!==</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">todo</span> <span class="o">||</span>
-    <span class="nx">nextProps</span><span class="p">.</span><span class="nx">editing</span> <span class="o">!==</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">editing</span> <span class="o">||</span>
-    <span class="nx">nextState</span><span class="p">.</span><span class="nx">editText</span> <span class="o">!==</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">editText</span>
-  <span class="p">);</span>
-<span class="p">},</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">MyComponent</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">node</span><span class="p">);</span>
 </code></pre></div>
-<p>By default, React &quot;re-renders&quot; all the components when anything changes. This is usually fast enough that you don&#39;t need to care. However, you can provide a function that can tell whether there will be any change based on the previous and next states and props. If it is faster than re-rendering the component, then you get a performance improvement.</p>
+<p>We anticipate that most components will need to depend only on the <code>react</code> package, which is lightweight and doesn&#39;t include any of the actual rendering logic. To start, we expect people to render DOM-based components with our <code>react-dom</code> package, but there&#39;s nothing stopping someone from diving deep on performance and writing a <code>awesome-faster-react-dom</code> package which can render <em>the exact same DOM-based components</em>. By decoupling the component definitions from the rendering, this becomes possible.</p>
 
-<p>The fact that you can control when components are rendered is a very important characteristic of React as it gives you control over its performance. We are going to talk more about performance in the future, stay tuned.</p>
-<h2><a class="anchor" name="guess-the-filter"></a>Guess the filter <a class="hash-link" href="#guess-the-filter">#</a></h2>
-<p><a href="http://conr.me">Connor McSheffrey</a> implemented a small game using React. The goal is to guess which filter has been used to create the Instagram photo.
-<figure><a href="http://guessthefilter.com/"><img src="/react/img/blog/guess_filter.jpg" alt=""></a></figure></p>
-<h2><a class="anchor" name="react-vs-fruitmachine"></a>React vs FruitMachine <a class="hash-link" href="#react-vs-fruitmachine">#</a></h2>
-<p><a href="http://trib.tv/">Andrew Betts</a>, director of the <a href="http://labs.ft.com/">Financial Times Labs</a>, posted an article comparing <a href="https://github.com/ftlabs/fruitmachine">FruitMachine</a> and React.</p>
+<p>More importantly, this paves the way to writing components that can be shared between the web version of React and React Native. This isn&#39;t yet easily possible, but we intend to make this easy in a future version so you can share React code between your website and native apps.</p>
 
-<blockquote>
-<p>Eerily similar, no? Maybe Facebook was inspired by Fruit Machine (after all, we got there first), but more likely, it just shows that this is a pretty decent way to solve the problem, and great minds think alike. We&#39;re graduating to a third phase in the evolution of web best practice - from intermingling of markup, style and behaviour, through a phase in which those concerns became ever more separated and encapsulated, and finally to a model where we can do that separation at a component level. Developments like Web Components show the direction the web community is moving, and frameworks like React and Fruit Machine are in fact not a lot more than polyfills for that promised behaviour to come.</p>
+<p>The addons have moved to separate packages as well: <code>react-addons-clone-with-props</code>, <code>react-addons-create-fragment</code>, <code>react-addons-css-transition-group</code>, <code>react-addons-linked-state-mixin</code>, <code>react-addons-pure-render-mixin</code>, <code>react-addons-shallow-compare</code>, <code>react-addons-transition-group</code>, and <code>react-addons-update</code>, plus <code>ReactDOM.unstable_batchedUpdates</code> in <code>react-dom</code>.</p>
 
-<p><a href="http://labs.ft.com/2013/10/client-side-layout-engines-react-vs-fruitmachine/">Read the full article...</a></p>
-</blockquote>
+<p>For now, please use the same version of <code>react</code> and <code>react-dom</code> in your apps to avoid versioning problems -- but we plan to remove this requirement later. (This release includes the old methods in the <code>react</code> package with a deprecation warning, but they&#39;ll be removed completely in 0.15.)</p>
 
-<p>Even though we weren&#39;t inspired by FruitMachine (React has been used in production since before FruitMachine was open sourced), it&#39;s great to see similar technologies emerging and becoming popular.</p>
-<h2><a class="anchor" name="react-brunch"></a>React Brunch <a class="hash-link" href="#react-brunch">#</a></h2>
-<p><a href="http://elucidata.net/">Matthew McCray</a> implemented <a href="https://npmjs.org/package/react-brunch">react-brunch</a>, a JSX compilation step for <a href="http://brunch.io/">Brunch</a>.</p>
+<h2>DOM node refs</h2>
 
-<blockquote>
-<p>Adds React support to brunch by automatically compiling <code>*.jsx</code> files.</p>
+<p>The other big change we&#39;re making in this release is exposing refs to DOM components as the DOM node itself. That means: we looked at what you can do with a <code>ref</code> to a DOM component and realized that the only useful thing you can do with it is call <code>this.refs.giraffe.getDOMNode()</code> to get the underlying DOM node. In this release, <code>this.refs.giraffe</code> <em>is</em> the actual DOM node.</p>
 
-<p>You can configure react-brunch to automatically insert a react header (<code>/** @jsx React.DOM */</code>) into all <code>*.jsx</code> files. Disabled by default.</p>
+<p>Refs to custom component classes work exactly as before.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Zoo</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="nx">Giraffe</span><span class="err">&#39;</span><span class="nx">s</span> <span class="nx">name</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">ref</span><span class="o">=</span><span class="s2">&quot;giraffe&quot;</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">},</span>
 
-<p>Install the plugin via npm with <code>npm install --save react-brunch</code>.</p>
+  <span class="nx">showName</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Previously:</span>
+    <span class="c1">// var input = this.refs.giraffe.getDOMNode();</span>
+    <span class="kd">var</span> <span class="nx">input</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">refs</span><span class="p">.</span><span class="nx">giraffe</span><span class="p">;</span>
 
-<p><a href="https://npmjs.org/package/react-brunch">Read more...</a></p>
-</blockquote>
-<h2><a class="anchor" name="random-tweet"></a>Random Tweet <a class="hash-link" href="#random-tweet">#</a></h2>
-<p>I&#39;m going to start adding a tweet at the end of each round-up. We&#39;ll start with this one:</p>
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>This change also applies to the return result of <code>ReactDOM.render</code> when passing a DOM node as the top component. As with refs, this change does not affect custom components (eg. <code>&lt;MyFancyMenu&gt;</code> or <code>&lt;MyContextProvider&gt;</code>), which remain unaffected by this change.</p>
 
-<blockquote class="twitter-tweet"><p>This weekend <a href="https://twitter.com/search?q=%23angular&amp;src=hash">#angular</a> died for me. Meet new king <a href="https://twitter.com/search?q=%23reactjs&amp;src=hash">#reactjs</a></p>&mdash; Eldar Djafarov &#x30C3; (@edjafarov) <a href="https://twitter.com/edjafarov/statuses/397033796710961152">November 3, 2013</a></blockquote>
+<p>Along with this change, we&#39;re also replacing <code>component.getDOMNode()</code> with <code>ReactDOM.findDOMNode(component)</code>. The <code>findDOMNode</code> method drills down to find which DOM node was rendered by a component, but it returns its argument when passed a DOM node so it&#39;s safe to call on a DOM component too. We introduced this function quietly in the last release, but now we&#39;re deprecating <code>.getDOMNode()</code> completely: it should be easy to change all existing calls in your code to be <code>ReactDOM.findDOMNode</code>. We also have an <a href="https://www.npmjs.com/package/react-codemod">automated codemod script</a> to help you with this transition. Note that the <code>findDOMNode</code> calls are unnecessary when you already have a DOM component ref (as in the example above), so you can (and should) skip them in most cases going forward.</p>
 
-        </div>
+<p>We hope you&#39;re as excited about this release as we are! Let us know what you think of it.</p>
+
+</div>
+
+
+
+      </div>
+    
+      <div class="post-list-item">
+        
+
+<h1>
+
+  <a href="/react/blog/2015/06/12/deprecating-jstransform-and-react-tools.html">Deprecating JSTransform and react-tools</a>
+
+</h1>
+
+<p class="meta">
+  June 12, 2015
+  by
+  
+    
+      <a href="https://twitter.com/zpao">Paul O’Shannessy</a>
+    
+    
+  
+</p>
+
+<hr>
+
+<div class="post">
+  <p>Today we&#39;re announcing the deprecation of react-tools and JSTransform.</p>
+
+<p>As many people have noticed already, React and React Native have both switched their respective build systems to make use of <a href="http://babeljs.io/">Babel</a>. This replaced <a href="https://github.com/facebook/jstransform">JSTransform</a>, the source transformation tool that we wrote at Facebook. JSTransform has been really good for us over the past several years, however as the JavaScript language continues to evolve, the architecture we used has begun to show its age. We&#39;ve faced maintenance issues and lagged behind implementing new language features. Last year, Babel (previously 6to5) exploded onto the scene, implementing new features at an amazing pace. Since then it has evolved a solid plugin API, and implemented some of our non-standard language features (JSX and Flow type annotations).</p>
+
+<p>react-tools has always been a very thin wrapper around JSTransform. It has served as a great tool for the community to get up and running, but at this point we&#39;re ready to <a href="https://www.youtube.com/watch?v=moSFlvxnbgk">let it go</a>. We won&#39;t ship a new version for v0.14.</p>
+
+<h2>Migrating to Babel</h2>
+
+<p>Many people in the React and broader JavaScript community have already adopted Babel. It has <a href="http://babeljs.io/docs/setup/">integrations with a number of tools</a>. Depending on your tool, you&#39;ll want to read up on the instructions.</p>
+
+<p>We&#39;ve been working with the Babel team as we started making use of it and we&#39;re confident that it will be the right tool to use with React.</p>
+
+<h2>Other Deprecations</h2>
+
+<h3>esprima-fb</h3>
+
+<p>As a result of no longer maintaining JSTransform, we no longer have a need to maintain our Esprima fork (<a href="https://github.com/facebook/esprima/">esprima-fb</a>). The upstream Esprima and other esprima-based forks, like Espree, have been doing an excellent job of supporting new language features recently. If you have a need of an esprima-based parser, we encourage you to look into using one of those.</p>
+
+<p>Alternatively, if you need to parse JSX, take a look at <a href="https://github.com/marijnh/acorn">acorn</a> parser in combination with <a href="https://github.com/RReverser/acorn-jsx">acorn-jsx</a> plugin which is used inside of Babel and thus always supports the latest syntax.</p>
+
+<h3>JSXTransformer</h3>
+
+<p>JSXTransformer is another tool we built specifically for consuming JSX in the browser. It was always intended as a quick way to prototype code before setting up a build process. It would look for <code>&lt;script&gt;</code> tags with <code>type=&quot;text/jsx&quot;</code> and then transform and run. This ran the same code that react-tools ran on the server. Babel ships with <a href="https://babeljs.io/docs/usage/browser/">a nearly identical tool</a>, which has already been integrated into <a href="https://jsbin.com/">JS Bin</a>.</p>
+
+<p>We&#39;ll be deprecating JSXTransformer, however the current version will still be available from various CDNs and Bower.</p>
+
+</div>
+
+
+
+      </div>
+    
+      <div class="post-list-item">
+        
+
+<h1>
+
+  <a href="/react/blog/2015/05/22/react-native-release-process.html">React Native Release Process</a>
+
+</h1>
+
+<p class="meta">
+  May 22, 2015
+  by
+  
+    
+      <a href="https://twitter.com/vjeux">Vjeux</a>
+    
+    
+  
+</p>
+
+<hr>
+
+<div class="post">
+  <p>The React Native release process have been a bit chaotic since we open sourced. It was unclear when new code was released, there was no changelog, we bumped the minor and patch version inconsistently and we often had to submit updates right after a release to fix a bad bug. In order to <em>move fast with stable infra</em>, we are introducing a real release process with a two-week release schedule.</p>
+
+<p>To explain how it works, let me walk you through an example. Today, Friday, we took the current state of master and put it on the 0.5-stable branch. We <a href="https://github.com/facebook/react-native/releases/tag/v0.5.0-rc">published 0.5.0-rc</a>, an RC (Release Candidate) when we cut the branch. For two weeks, we&#39;re going to let it stabilize and only cherry-pick critical bug fixes from master.</p>
+
+<p>Friday in two weeks, we&#39;re going to publish the 0.5.0 release, create the 0.6-stable branch and publish 0.6.0-rc as well.</p>
+
+<p>The release process is synchronized with Facebook&#39;s mobile release process. This means that everything in the open source release is also being shipped as part of all the Facebook apps that use React Native!</p>
+
+<p>You now have three ways to get React Native. You should chose the one you want based on the amount of risk you tolerate:</p>
+
+<ul>
+<li><strong>master</strong>: You have updates as soon as they are committed. This is if you want to live on the bleeding edge or want to submit pull requests.</li>
+<li><strong>rc</strong>: If you don&#39;t want to update every day and deal with many instabilities but want to have recent updates, this is your best shot.</li>
+<li><strong>release</strong>: This is the most stable version we offer. The trade-off is that it contains commits that are up to a month old.</li>
+</ul>
+
+<p>If you want more details, I highly recommend this video that explains how Facebook mobile release process works and why it was setup this way.</p>
+
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/mOyoTUETmSM" frameborder="0" allowfullscreen></iframe>
+
+</div>
+
+
+
       </div>
     
 
@@ -454,19 +507,52 @@ Is this some sort of template language? Specifically no. This might have been th
 </section>
 
 
-    <footer class="wrap">
-      <div class="left">
-        A Facebook &amp; Instagram collaboration.<br>
-        <a href="/react/acknowledgements.html">Acknowledgements</a>
-      </div>
-      <div class="right">
-        &copy; 2013&ndash;2014 Facebook Inc.<br>
-        Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
-      </div>
-    </footer>
-  </div>
-  <div id="fb-root"></div>
+    <footer class="nav-footer">
+  <section class="sitemap">
+    <a href="/react/" class="nav-home">
+    </a>
+    <div>
+      <h5><a href="/react/docs/">Docs</a></h5>
+      <a href="/react/docs/hello-world.html">Quick Start</a>
+      <a href="/react/docs/thinking-in-react.html">Thinking in React</a>
+      <a href="/react/tutorial/tutorial.html">Tutorial</a>
+      <a href="/react/docs/jsx-in-depth.html">Advanced Guides</a>
+    </div>
+    <div>
+      <h5><a href="/react/community/support.html">Community</a></h5>
+      <a href="http://stackoverflow.com/questions/tagged/reactjs" target="_blank">Stack Overflow</a>
+      <a href="https://discuss.reactjs.org/" target="_blank">Discussion Forum</a>
+      <a href="https://discord.gg/0ZcbPKXt5bZjGY5n" target="_blank">Reactiflux Chat</a>
+      <a href="https://www.facebook.com/react" target="_blank">Facebook</a>
+      <a href="https://twitter.com/reactjs" target="_blank">Twitter</a>
+    </div>
+    <div>
+      <h5><a href="/react/community/support.html">Resources</a></h5>
+      <a href="/react/community/conferences.html">Conferences</a>
+      <a href="/react/community/videos.html">Videos</a>
+      <a href="https://github.com/facebook/react/wiki/Examples" target="_blank">Examples</a>
+      <a href="https://github.com/facebook/react/wiki/Complementary-Tools" target="_blank">Complementary Tools</a>
+    </div>
+    <div>
+      <h5>More</h5>
+      <a href="/react/blog/">Blog</a>
+      <a href="https://github.com/facebook/react" target="_blank">GitHub</a>
+      <a href="http://facebook.github.io/react-native/" target="_blank">React Native</a>
+      <a href="/react/acknowledgements.html">Acknowledgements</a>
+    </div>
+  </section>
+  <a href="https://code.facebook.com/projects/" target="_blank" class="fbOpenSource">
+    <img src="/react/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/>
+  </a>
+  <section class="copyright">
+    Copyright © 2017 Facebook Inc.
+  </section>
+</footer>
 
+  </div>
+
+  <div id="fb-root"></div>
+  <script src="/react/js/anchor-links.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -481,9 +567,15 @@ Is this some sort of template language? Specifically no. This might have been th
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=623268441017527";
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=623268441017527";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+
+    docsearch({
+      apiKey: '36221914cce388c46d0420343e0bb32e',
+      indexName: 'react',
+      inputSelector: '#algolia-doc-search'
+    });
   </script>
 </body>
 </html>
